@@ -1,0 +1,7 @@
+--- 
+zone_members_01: 
+  zoneable_id: "168"
+  created_at: <%= Time.zone.now.to_s(:db) %>
+  updated_at: <%= Time.zone.now.to_s(:db) %>
+  zone_id: "1"
+  zoneable_type: Country

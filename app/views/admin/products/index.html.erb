@@ -1,0 +1,94 @@
+<%= render :partial => 'admin/shared/product_sub_menu' %>
+
+<div class='toolbar'>
+  <ul class='actions'>
+    <li id="new_product_link">
+      <%= button_link_to t("new_product"), new_object_url, {:remote => true, :icon => 'add', :id => 'admin_new_product'} %>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+
+<h1><%= "#{t("actions.listing")} #{t("products")}" %></h1>
+
+<div id="new_product"></div>
+
+<table class="index" id='listing_products'>
+  <tr>
+    <%= hook :admin_products_index_headers do %>
+      <th><%= t("sku") %></th>
+      <th><%= sort_link @search,:name, t("name"), {}, {:title => 'admin_products_listing_name_title'} %></th>
+      <th><%= sort_link @search,:master_price, t("master_price") %></th>
+    <% end %>
+    <th>
+      <%= hook :admin_products_index_header_actions %>
+    </th>
+  </tr>
+<% @collection.each do |product| %>
+  <tr <%= 'style="color:red;"' if product.deleted? %> id="<%= dom_id product %>">
+    <%- locals = {:product => product} %>
+    <%= hook :admin_products_index_rows, locals do %>
+      <td><%= product.sku %></td>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+    <% end %>
+    <td class="actions">
+      <%= hook :admin_products_index_row_actions, locals do %>
+        <%= link_to_edit product, :class => 'edit' unless product.deleted?  %>
+        &nbsp;
+        <%= link_to_clone product, :class => 'clone' %>
+        &nbsp;
+        <%= link_to_delete product unless product.deleted?  %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate(:previous_label => "&#171; #{t('previous')}", :next_label => "#{t('next')} &#187;") %>
+
+<% content_for :sidebar do %>
+
+  <%= form_for [:admin, @search] do |f| %>
+    <div class="box">
+      <h3><%= t(:search) %></h3>
+
+      <%- locals = {:f => f} %>
+      <%= hook :admin_products_index_search, locals do %>
+        <p>
+          <%= f.label :name_contains, t("name") %><br />
+          <%= f.text_field :name_contains, :size => 15 %>
+        </p>
+        <p>
+          <%= f.label :variants_including_master_sku_contains, t("sku") %><br />
+          <%= f.text_field :variants_including_master_sku_contains, :size => 15 %>
+        </p>
+        <p>
+          <%= f.label :deleted_at_is_null, t("show_deleted") %><br />
+          <%= f.check_box :deleted_at_is_null, {:checked => params[:search][:deleted_at_is_null].blank?}, "", "1" %>
+        </p>
+      <% end %>
+
+      <%= hook :admin_products_index_search_buttons, locals do %>
+        <p class="form-buttons">
+          <%= button t("search") %>
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= form_tag import_from_yandex_market_path, :method => :get do %>
+    <div class="box">
+     <h3>Импорт с Яндекс.Маркет</h3>
+     <p>
+       <%= label_tag :model_id, "ID товара на ЯМ" %><br />
+       <%= text_field_tag :model_id %>
+     </p>
+     <p>
+       <%= check_box_tag :available %>&nbsp;<%= label_tag :available, "сделать доступным" %>        
+     </p>
+     <p class="form-buttons">
+      <%= button "Импорт" %>
+     </p>
+    </div>
+  <% end %>
+<% end %>

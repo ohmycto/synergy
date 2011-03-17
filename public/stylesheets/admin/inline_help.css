@@ -1,0 +1,21 @@
+.tooltip{
+  position: absolute;
+  padding: 10px 12px;
+  z-index: 2;
+
+  color: #303030;
+  background-color: #f5f5b5;
+  border: 1px solid #DECA7E;
+
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.tooltip h3{
+  margin: 0 0 5px;
+  text-align: left;
+}
+
+.help { cursor: help; }

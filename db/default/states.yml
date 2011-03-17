@@ -1,0 +1,418 @@
+---
+<% country_id = 168 %>
+states_01:
+  id: 1
+  name: "Республика Адыгея"
+  country_id: <%= country_id %>
+  abbr: "RU-AD"
+states_02:
+  id: 2
+  name: "Республика Башкортостан"
+  country_id: <%= country_id %>
+  abbr: "RU-BA"
+states_03:
+  id: 3
+  name: "Республика Бурятия"
+  country_id: <%= country_id %>
+  abbr: "RU-BU"
+states_04:
+  id: 4
+  name: "Республика Алтай"
+  country_id: <%= country_id %>
+  abbr: "RU-AL"
+states_05:
+  id: 5
+  name: "Республика Дагестан"
+  country_id: <%= country_id %>
+  abbr: "RU-DA"
+states_06:
+  id: 6
+  name: "Республика Ингушетия"
+  country_id: <%= country_id %>
+  abbr: "RU-IN"
+states_07:
+  id: 7
+  name: "Кабардино-Балкарская республика"
+  country_id: <%= country_id %>
+  abbr: "RU-KB"
+states_08:
+  id: 8
+  name: "Республика Калмыкия"
+  country_id: <%= country_id %>
+  abbr: "RU-KL"
+states_09:
+  id: 9
+  name: "Карачаево-Черкесская республика"
+  country_id: <%= country_id %>
+  abbr: "RU-KC"
+states_10:
+  id: 10
+  name: "Республика Карелия"
+  country_id: <%= country_id %>
+  abbr: "RU-KR"
+states_11:
+  id: 11
+  name: "Республика Коми"
+  country_id: <%= country_id %>
+  abbr: "RU-KO"
+states_12:
+  id: 12
+  name: "Республика Марий Эл"
+  country_id: <%= country_id %>
+  abbr: "RU-ME"
+states_13:
+  id: 13
+  name: "Республика Мордовия"
+  country_id: <%= country_id %>
+  abbr: "RU-MO"
+states_14:
+  id: 14
+  name: "Республика Саха (Якутия)"
+  country_id: <%= country_id %>
+  abbr: "RU-SA"
+states_15:
+  id: 15
+  name: "Республика Северная Осетия — Алания"
+  country_id: <%= country_id %>
+  abbr: "RU-SE"
+states_16:
+  id: 16
+  name: "Республика Татарстан"
+  country_id: <%= country_id %>
+  abbr: "RU-TA"
+states_17:
+  id: 17
+  name: "Республика Тыва"
+  country_id: <%= country_id %>
+  abbr: "RU-TY"
+states_18:
+  id: 18
+  name: "Удмуртская республика"
+  country_id: <%= country_id %>
+  abbr: "RU-UD"
+states_19:
+  id: 19
+  name: "Республика Хакасия"
+  country_id: <%= country_id %>
+  abbr: "RU-KK"
+states_20:
+  id: 20
+  name: "Чеченская республика"
+  country_id: <%= country_id %>
+  abbr: "RU-CE"
+states_21:
+  id: 21
+  name: "Чувашская республика"
+  country_id: <%= country_id %>
+  abbr: "RU-CU"
+states_22:
+  id: 22
+  name: "Алтайский край"
+  country_id: <%= country_id %>
+  abbr: "RU-ALT"
+states_75:
+  id: 75
+  name: "Забайкальский край"
+  country_id: <%= country_id %>
+  abbr: "RU-ZAB"
+states_41:
+  id: 41
+  name: "Камчатский край"
+  country_id: <%= country_id %>
+  abbr: "RU-KAM"
+states_23:
+  id: 23
+  name: "Краснодарский край"
+  country_id: <%= country_id %>
+  abbr: "RU-KDA"
+states_24:
+  id: 24
+  name: "Красноярский край"
+  country_id: <%= country_id %>
+  abbr: "RU-KIA"
+states_59:
+  id: 59
+  name: "Пермский край"
+  country_id: <%= country_id %>
+  abbr: "RU-PER"
+states_25:
+  id: 25
+  name: "Приморский край"
+  country_id: <%= country_id %>
+  abbr: "RU-PRI"
+states_26:
+  id: 26
+  name: "Ставропольский край"
+  country_id: <%= country_id %>
+  abbr: "RU-STA"
+states_27:
+  id: 27
+  name: "Хабаровский край"
+  country_id: <%= country_id %>
+  abbr: "RU-KHA"
+states_28:
+  id: 28
+  name: "Амурская область"
+  country_id: <%= country_id %>
+  abbr: "RU-AMU"
+states_29:
+  id: 29
+  name: "Архангельская область"
+  country_id: <%= country_id %>
+  abbr: "RU-ARK"
+states_30:
+  id: 30
+  name: "Астраханская область"
+  country_id: <%= country_id %>
+  abbr: "RU-AST"
+states_31:
+  id: 31
+  name: "Белгородская область"
+  country_id: <%= country_id %>
+  abbr: "RU-BEL"
+states_32:
+  id: 32
+  name: "Брянская область"
+  country_id: <%= country_id %>
+  abbr: "RU-BRY"
+states_33:
+  id: 33
+  name: "Владимирская область"
+  country_id: <%= country_id %>
+  abbr: "RU-VLA"
+states_34:
+  id: 34
+  name: "Волгоградская область"
+  country_id: <%= country_id %>
+  abbr: "RU-VGG"
+states_35:
+  id: 35
+  name: "Вологодская область"
+  country_id: <%= country_id %>
+  abbr: "RU-VLG"
+states_36:
+  id: 36
+  name: "Воронежская область"
+  country_id: <%= country_id %>
+  abbr: "RU-VOR"
+states_37:
+  id: 37
+  name: "Ивановская область"
+  country_id: <%= country_id %>
+  abbr: "RU-IVA"
+states_38:
+  id: 38
+  name: "Иркутская область"
+  country_id: <%= country_id %>
+  abbr: "RU-IRK"
+states_39:
+  id: 39
+  name: "Калининградская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KGD"
+states_40:
+  id: 40
+  name: "Калужская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KLU"
+states_42:
+  id: 42
+  name: "Кемеровская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KEM"
+states_43:
+  id: 43
+  name: "Кировская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KIR"
+states_44:
+  id: 44
+  name: "Костромская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KOS"
+states_45:
+  id: 45
+  name: "Курганская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KGN"
+states_46:
+  id: 46
+  name: "Курская область"
+  country_id: <%= country_id %>
+  abbr: "RU-KRS"
+states_47:
+  id: 47
+  name: "Ленинградская область"
+  country_id: <%= country_id %>
+  abbr: "RU-LEN"
+states_48:
+  id: 48
+  name: "Липецкая область"
+  country_id: <%= country_id %>
+  abbr: "RU-LIP"
+states_49:
+  id: 49
+  name: "Магаданская область"
+  country_id: <%= country_id %>
+  abbr: "RU-MAG"
+states_50:
+  id: 50
+  name: "Московская область"
+  country_id: <%= country_id %>
+  abbr: "RU-MOS"
+states_51:
+  id: 51
+  name: "Мурманская область"
+  country_id: <%= country_id %>
+  abbr: "RU-MUR"
+states_52:
+  id: 52
+  name: "Нижегородская область"
+  country_id: <%= country_id %>
+  abbr: "RU-NIZ"
+states_53:
+  id: 53
+  name: "Новгородская область"
+  country_id: <%= country_id %>
+  abbr: "RU-NGR"
+states_54:
+  id: 54
+  name: "Новосибирская область"
+  country_id: <%= country_id %>
+  abbr: "RU-NVS"
+states_55:
+  id: 55
+  name: "Омская область"
+  country_id: <%= country_id %>
+  abbr: "RU-OMS"
+states_56:
+  id: 56
+  name: "Оренбургская область"
+  country_id: <%= country_id %>
+  abbr: "RU-ORE"
+states_57:
+  id: 57
+  name: "Орловская область"
+  country_id: <%= country_id %>
+  abbr: "RU-ORL"
+states_58:
+  id: 58
+  name: "Пензенская область"
+  country_id: <%= country_id %>
+  abbr: "RU-PNZ"
+states_60:
+  id: 60
+  name: "Псковская область"
+  country_id: <%= country_id %>
+  abbr: "RU-PSK"
+states_61:
+  id: 61
+  name: "Ростовская область"
+  country_id: <%= country_id %>
+  abbr: "RU-ROS"
+states_62:
+  id: 62
+  name: "Рязанская область"
+  country_id: <%= country_id %>
+  abbr: "RU-RYA"
+states_63:
+  id: 63
+  name: "Самарская область"
+  country_id: <%= country_id %>
+  abbr: "RU-SAM"
+states_64:
+  id: 64
+  name: "Саратовская область"
+  country_id: <%= country_id %>
+  abbr: "RU-SAR"
+states_65:
+  id: 65
+  name: "Сахалинская область"
+  country_id: <%= country_id %>
+  abbr: "RU-SAK"
+states_66:
+  id: 66
+  name: "Свердловская область"
+  country_id: <%= country_id %>
+  abbr: "RU-SVE"
+states_67:
+  id: 67
+  name: "Смоленская область"
+  country_id: <%= country_id %>
+  abbr: "RU-SMO"
+states_68:
+  id: 68
+  name: "Тамбовская область"
+  country_id: <%= country_id %>
+  abbr: "RU-TAM"
+states_69:
+  id: 69
+  name: "Тверская область"
+  country_id: <%= country_id %>
+  abbr: "RU-TVE"
+states_70:
+  id: 70
+  name: "Томская область"
+  country_id: <%= country_id %>
+  abbr: "RU-TOM"
+states_71:
+  id: 71
+  name: "Тульская область"
+  country_id: <%= country_id %>
+  abbr: "RU-TUL"
+states_72:
+  id: 72
+  name: "Тюменская область"
+  country_id: <%= country_id %>
+  abbr: "RU-TYU"
+states_73:
+  id: 73
+  name: "Ульяновская область"
+  country_id: <%= country_id %>
+  abbr: "RU-ULY"
+states_74:
+  id: 74
+  name: "Челябинская область"
+  country_id: <%= country_id %>
+  abbr: "RU-CHE"
+states_76:
+  id: 76
+  name: "Ярославская область"
+  country_id: <%= country_id %>
+  abbr: "RU-YAR"
+states_77:
+  id: 77
+  name: "Москва"
+  country_id: <%= country_id %>
+  abbr: "RU-MOW"
+states_78:
+  id: 78
+  name: "Санкт-Петербург"
+  country_id: <%= country_id %>
+  abbr: "RU-SPE"
+states_79:
+  id: 79
+  name: "Еврейская автономная область"
+  country_id: <%= country_id %>
+  abbr: "RU-YEV"
+states_83:
+  id: 83
+  name: "Ненецкий автономный округ"
+  country_id: <%= country_id %>
+  abbr: "RU-NEN"
+states_86:
+  id: 86
+  name: "Ханты-Мансийский автономный округ - Югра"
+  country_id: <%= country_id %>
+  abbr: "RU-KHM"
+states_87:
+  id: 87
+  name: "Чукотский автономный округ"
+  country_id: <%= country_id %>
+  abbr: "RU-CHU"
+states_89:
+  id: 89
+  name: "Ямало-Ненецкий автономный округ"
+  country_id: <%= country_id %>
+  abbr: "RU-YAN"
+

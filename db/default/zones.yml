@@ -1,0 +1,8 @@
+--- 
+zones_001: 
+  name: "РФ"
+  created_at: <%= Time.zone.now.to_s(:db) %>
+  updated_at: <%= Time.zone.now.to_s(:db) %>
+  id: "1"
+  description: "Российская Федерация"
+

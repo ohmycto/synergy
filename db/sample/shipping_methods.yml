@@ -1,0 +1,9 @@
+ups_ground:
+  name: "Почта России (наложным платежём)"
+  zone_id: 1
+ups_two_day:
+  name: "Почта России (по предоплате)"
+  zone_id: 1
+ups_one_day:
+  name: "Курьером"
+  zone_id: 1
