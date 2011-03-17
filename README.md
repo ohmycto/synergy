@@ -32,9 +32,11 @@ Synergy
 1. Выполните следующие команды:
     
         bundle install
+        rails g spree:site -f
         rake spree:install
         rake synergy:install
         rake db:migrate
+        rake db:seed db:sample
         rails s
     
 
