@@ -24,7 +24,7 @@ Synergy
         gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
         gem 'spree_online_support', :git => 'git://github.com/secoint/spree_online_support.git'
         gem 'spree_robokassa', :git => 'git://github.com/romul/spree_robokassa.git'
-        gem 'spree_yandex_market', :git => 'git://github.com/romul/spree_yandex_market.git'
+        gem 'spree_yandex_market', :git => 'git://github.com/romul/spree-yandex-market.git'
         gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git'
         gem 'spree_enhanced_option_types', :git => 'git://github.com/romul/spree-enhanced-option-types.git'
         gem 'synergy', :git => 'git://github.com/secoint/synergy.git'
