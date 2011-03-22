@@ -18,7 +18,7 @@ Synergy
 1. Настройте подключение к базе данных (рекомендуется MySQL с адаптером mysql2)
 1. Добавьте в Gemfile следующие строки:
     
-        gem 'spree', :git => 'git://github.com/spree/spree.git'
+        gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-50-stable'
         gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
         gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
         gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
