@@ -1,3 +1,4 @@
+# coding: utf-8
 Admin::ProductsController.class_eval do
   require 'nokogiri'
   require 'open-uri'
