@@ -38,6 +38,15 @@ Synergy
         rake db:migrate
         rake db:seed db:sample
         rails s
+
+
+Обновление
+==========
+
+        bundle update
+        rake synergy:install
+        rake db:migrate
+        rails s
     
 
 Copyright (c) 2011 Roman Smirnov, released under the GNU GPL v3
