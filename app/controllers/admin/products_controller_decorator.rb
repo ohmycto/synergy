@@ -4,7 +4,12 @@ Admin::ProductsController.class_eval do
   require 'open-uri'
   
   def import_from_yandex_market
-    market_url = "http://market.yandex.ru/model.xml?modelid=#{params[:model_id]}"
+    if params[:model_id].to_i > 0
+      market_url = "http://market.yandex.ru/model.xml?modelid=#{params[:model_id]}"
+    else
+      market_url = params[:model_id]
+    end
+    taxonomy = Taxonomy.find_or_create_by_name("Категории")
     begin
       doc = Nokogiri::HTML(open(market_url))
 
@@ -22,7 +27,6 @@ Admin::ProductsController.class_eval do
       image_urls = doc.css("#model-pictures a").map{|link| link['href'] }
       name = doc.css("#global-model-name").first.content
 
-      taxonomy = Taxonomy.first
       p = Product.new(:name => name, :price => price)
       p.available_on = Time.now if params[:available]
       if p.valid?
