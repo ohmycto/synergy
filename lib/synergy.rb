@@ -21,7 +21,11 @@ module Synergy
         Spree::Config.set(:default_locale => :ru)
         Spree::Config.set(:default_country_id => 168)
         Spree::Config.set(:allow_ssl_in_production => false)
+        Spree::Config.set(:disable_bill_address => true)
       end
+      
+      ADDRESS_FIELDS.clear << ["firstname", "lastname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
+      ADDRESS_FIELDS.flatten!
 
       String.class_eval do
         def to_url

@@ -1,6 +1,8 @@
 ru:
   activerecord:
     attributes:
+      address:
+        secondname: "Отчество"
       promotion:
         name: "Название"
         description: "Описание"
