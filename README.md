@@ -27,7 +27,7 @@ Synergy
         gem 'spree_yandex_market', :git => 'git://github.com/romul/spree-yandex-market.git'
         gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git'
         gem 'spree_enhanced_option_types', :git => 'git://github.com/romul/spree-enhanced-option-types.git'
-        gem 'dynamic_sitemaps', 'git://github.com/romul/spree_dynamic_sitemaps.git'
+        gem 'dynamic_sitemaps', :git => 'git://github.com/romul/spree_dynamic_sitemaps.git'
         gem 'synergy', :git => 'git://github.com/secoint/synergy.git'
     
 1. Выполните следующие команды:
