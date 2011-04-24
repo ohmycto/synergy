@@ -25,7 +25,7 @@ module Synergy
         Spree::Config.set(:disable_bill_address => true)
       end
       
-      ADDRESS_FIELDS.clear << ["firstname", "lastname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
+      ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
       ADDRESS_FIELDS.flatten!
 
       String.class_eval do
