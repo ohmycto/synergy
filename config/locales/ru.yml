@@ -1,4 +1,6 @@
 ru:
+  cash_on_delivery: "Наложенный платёж"
+
   activerecord:
     attributes:
       address:

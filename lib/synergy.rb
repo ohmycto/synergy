@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'spree_core'
 require 'synergy_hooks'
 
@@ -33,6 +34,13 @@ module Synergy
         end
      	end
       
+      # зарегистрировать калькулятор для доставки наложенным платежём
+      Calculator::CashOnDelivery.register
+      
+      # добавить событие для перехода от шага доставки к шагу завершения, минуя шаг оплаты
+      complete_event = StateMachine::Event.new(Order.state_machine, :complete_without_payment)
+      complete_event.transition(:to => 'complete')
+      Order.state_machine.events << complete_event
     end
 
     config.to_prepare &method(:activate).to_proc
