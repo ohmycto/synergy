@@ -1,0 +1,8 @@
+ul#shipping-specs label {
+  display: block;
+}
+
+ul#shipping-specs li {
+  display: block;
+  list-style-image: none;
+}
