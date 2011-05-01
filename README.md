@@ -18,16 +18,16 @@ Synergy
 1. Настройте подключение к базе данных (рекомендуется MySQL с адаптером mysql2)
 1. Добавьте в Gemfile следующие строки:
     
-        gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-50-stable'
+        gem 'mysql2', '0.2.7'
+        gem 'spree', '~> 0.50.2'
         gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
-        gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
-        gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
-        gem 'spree_online_support', :git => 'git://github.com/secoint/spree_online_support.git'
-        gem 'spree_robokassa', :git => 'git://github.com/romul/spree_robokassa.git'
-        gem 'spree_yandex_market', :git => 'git://github.com/romul/spree-yandex-market.git'
-        gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git'
-        gem 'spree_enhanced_option_types', :git => 'git://github.com/romul/spree-enhanced-option-types.git'
-        gem 'dynamic_sitemaps', :git => 'git://github.com/romul/spree_dynamic_sitemaps.git'
+        gem 'spree_static_content'
+        gem 'spree_editor'
+        gem 'spree_online_support'
+        gem 'spree_robokassa'
+        gem 'spree_yandex_market'
+        gem 'spree_address_book'
+        gem 'spree_dynamic_sitemaps'
         gem 'synergy', :git => 'git://github.com/secoint/synergy.git'
     
 1. Выполните следующие команды:
