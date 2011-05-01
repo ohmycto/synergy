@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
 
   s.author            = 'Roman Smirnov'
   s.email             = 'roman@railsdog.com'
-  # s.homepage          = 'http://www.rubyonrails.org'
+  s.homepage          = 'https://github.com/secoint/synergy'
   # s.rubyforge_project = 'actionmailer'
 
   s.files         = `git ls-files`.split("\n")

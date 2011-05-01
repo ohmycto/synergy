@@ -7,9 +7,9 @@ Synergy
 Установка
 =========
 
-1. Установите Rails 3.0.5
+1. Установите Rails 3.0.7
     
-        gem install rails -v 3.0.5
+        gem install rails -v 3.0.7
     
 1. Создайте новое приложение
     
@@ -28,7 +28,7 @@ Synergy
         gem 'spree_yandex_market'
         gem 'spree_address_book'
         gem 'spree_dynamic_sitemaps'
-        gem 'synergy', :git => 'git://github.com/secoint/synergy.git'
+        gem 'synergy', '~> 0.50.0.rc1'
     
 1. Выполните следующие команды:
     
