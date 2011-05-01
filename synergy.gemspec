@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'synergy'
-  s.version     = '0.50.0.rc0'
+  s.version     = '0.50.0.rc1'
   s.summary     = 'Russian e-commerce solution based on Spree'
   #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
@@ -16,18 +16,15 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.has_rdoc = true
-
-  s.add_dependency('russian')
-  s.add_dependency('json')
+  s.add_dependency('russian', '0.2.7')
+  s.add_dependency('json', '1.5.1')
   s.add_dependency('nokogiri', '1.4.4')
-  s.add_dependency('spree', '>= 0.40.99')
-  s.add_dependency('spree_i18n')
-  s.add_dependency('spree_static_content', '>= 0.40.0')
-  s.add_dependency('spree_editor')
-  s.add_dependency('spree_enhanced_option_types', '>= 0.30.0')
-  s.add_dependency('spree_robokassa')
-  s.add_dependency('spree_yandex_market')
-  s.add_dependency('spree_online_support')
-  s.add_dependency('spree_address_book')
+  s.add_dependency('spree', '~> 0.50.2')
+  s.add_dependency('spree_static_content', '~> 0.40.2')
+  s.add_dependency('spree_editor', '~> 0.50.0')
+  s.add_dependency('spree_robokassa', '~> 0.50.0')
+  s.add_dependency('spree_yandex_market', '~> 1.2.0')
+  s.add_dependency('spree_online_support', '~> 0.50.0')
+  s.add_dependency('spree_address_book', '~> 0.50.0')
+  s.add_dependency('spree_dynamic_sitemaps', '~> 0.50.1')
 end
