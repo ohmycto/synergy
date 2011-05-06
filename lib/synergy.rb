@@ -23,6 +23,8 @@ module Synergy
         Spree::Config.set(:default_country_id => 168)
         Spree::Config.set(:allow_ssl_in_production => false)
         Spree::Config.set(:disable_bill_address => true)
+        checkout_zone = Zone.first
+        Spree::Config.set(:checkout_zone => checkout_zone.name) if checkout_zone
       end
       
       ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
