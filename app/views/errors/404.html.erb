@@ -1,0 +1,7 @@
+<h1><%= t(:page_not_found) %></h1>
+
+<% content_for :sidebar do %>
+  <%= hook :taxon_sidebar_navigation do %>
+    <%= render :partial => "shared/taxonomies" %>
+  <% end %>
+<% end %>

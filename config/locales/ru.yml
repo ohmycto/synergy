@@ -1,5 +1,6 @@
 ru:
   cash_on_delivery: "Наложенный платёж"
+  page_not_found: "Страница не найдена"
 
   activerecord:
     attributes:
