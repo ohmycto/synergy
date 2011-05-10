@@ -6,3 +6,7 @@ ul#shipping-specs li {
   display: block;
   list-style-image: none;
 }
+
+#content {
+  position: relative;
+}
