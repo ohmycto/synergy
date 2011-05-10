@@ -10,3 +10,5 @@ ul#shipping-specs li {
 #content {
   position: relative;
 }
+
+input.format-y-m-d { width: 90% }
