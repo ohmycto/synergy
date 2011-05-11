@@ -47,22 +47,22 @@
           <table id="order_totals">
             <tr>
 					    <td style="width:23%;">
-						    <label id="orders_total"><%= number_with_delimiter @orders_total.to_i %>&nbsp;<%= t("number.currency.format.unit") %></label>
+						    <label id="orders_total"><%= number_to_currency(@orders_total.round) %></label>
 						    <span><%= t('orders') %> (<%= t('amount') %>)</span>
 					    </td>
 					    <td class="spacer">|</td>
 					    <td style="width:23%;">
-						    <label id="orders_line_total"><%= number_with_delimiter @orders_line_total.to_i %>&nbsp;<%= t("number.currency.format.unit") %></label>
+						    <label id="orders_line_total"><%= number_to_currency(@orders_line_total.round) %></label>
 						    <span><%== t('items') %> (<%= t('amount') %>)</span>
 					    </td>
 					    <td class="spacer">|</td>
 					    <td style="width:23%;">
-						    <label id="orders_adjustment_total"><%= number_with_delimiter @orders_adjustment_total.to_i %>&nbsp;<%= t("number.currency.format.unit") %></label>
+						    <label id="orders_adjustment_total"><%= number_to_currency(@orders_adjustment_total.round) %></label>
 						    <span><%= t('adjustments') %></span>
 					    </td>
 					    <td class="spacer">|</td>
 					    <td style="width:22%">
-						    <label id="orders_adjustment_total"><%= number_with_delimiter @orders_credit_total.to_i %>&nbsp;<%= t("number.currency.format.unit") %></label>
+						    <label id="orders_adjustment_total"><%= number_to_currency(@orders_credit_total.round) %></label>
 						    <span><%= t('credits') %></span>
 					    </td>
             </tr>
