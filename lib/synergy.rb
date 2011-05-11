@@ -23,6 +23,7 @@ module Synergy
         Spree::Config.set(:default_country_id => 168)
         Spree::Config.set(:allow_ssl_in_production => false)
         Spree::Config.set(:disable_bill_address => true)
+        Spree::Config.set(:admin_interface_logo => "admin/logo.png")
         checkout_zone = Zone.first
         Spree::Config.set(:checkout_zone => checkout_zone.name) if checkout_zone
       end

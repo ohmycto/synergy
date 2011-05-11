@@ -12,3 +12,87 @@ ul#shipping-specs li {
 }
 
 input.format-y-m-d { width: 90% }
+
+body {
+  background-color: #bbb;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 18pt;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+#logo {
+  margin-top: 30px;
+}
+
+#header h1 a {
+  color: white;
+  
+}
+
+#login-nav {
+  color: black;
+  font-weight: bold;
+}
+
+#login-nav a {
+  color: black;
+  font-weight: normal;
+}
+
+#login-nav a:hover {
+  text-decoration: underline;
+}
+
+#admin-menu {
+  background: url("../../images/admin/bg/admin_menu_back.png") repeat-x scroll left top;
+  border-bottom: none;
+  border-right: none;
+  border-top: 1px solid white;
+}
+
+#admin-menu ul li:first-child {
+  border-left: none;
+}
+
+#admin-menu ul li a {
+  color: black;
+}
+
+#admin-menu ul li.selected a {
+  color: white;
+  background-color: transparent;
+}
+
+#admin-menu ul li.selected {
+  border-style: none;
+  border-top: 1px solid black;
+  background: #3d3d3d;
+}
+
+#sub-menu {
+  background: url("../../images/admin/bg/admin_sub_menu_back.png") repeat-x scroll left top;
+  border-top: 1px solid black;
+  box-shadow: #A1A1A1 0 -1px 0;
+  border-left: none;
+  border-right: none;
+}
+
+#sub-menu ul li a {
+  color: white;
+  margin: 8px 5px;
+}
+
+#sub-menu ul li.selected a {
+  color: #00d1fc;
+  text-shadow: #3a3a3a 0 1px 0;
+  background: #595959;
+  border: 1px solid #333;
+  border-right-color: #999;
+  border-bottom-color: #999;
+}
