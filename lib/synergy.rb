@@ -1,6 +1,7 @@
 # coding: utf-8
 require 'spree_core'
 require 'synergy_hooks'
+require 'ext/number_helper'
 
 module Synergy
   class Engine < Rails::Engine
@@ -37,13 +38,6 @@ module Synergy
         end
      	end
      	
-     	ActionView::Helpers::NumberHelper.module_eval do
-     	  def number_to_currency_with_synergy(number, options = {})
-     	    number_to_currency_without_synergy(number, options).gsub(' ', "\302\240")
-     	  end
-     	  alias_method_chain :number_to_currency, :synergy
-     	end
-      
       # зарегистрировать калькулятор для доставки наложенным платежём
       Calculator::CashOnDelivery.register
       
