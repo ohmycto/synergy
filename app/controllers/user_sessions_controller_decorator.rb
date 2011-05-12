@@ -15,7 +15,7 @@ UserSessionsController.class_eval do
       end
       session[:order_id] = order.id
     else
-      guest_order.associate_user!(current_user)
+      guest_order.associate_user!(current_user) if guest_order
     end
     
     session[:guest_token] = nil
