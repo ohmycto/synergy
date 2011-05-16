@@ -31,7 +31,7 @@ Synergy
         gem 'spree_address_book'
         gem 'spree_dynamic_sitemaps'
         gem 'synergy', '~> 0.50.0'
-        gem 'synergy_default_theme', '1.0.1' # опционально
+        gem 'synergy_default_theme', '1.0.1'
     
 1. Выполните следующие команды:
     
@@ -39,6 +39,7 @@ Synergy
         rails g spree:site -f
         rake spree:install
         rake synergy:install
+        rake synergy_default_theme:install
         rake db:migrate
         rake db:seed db:sample
         rake db:admin:create
