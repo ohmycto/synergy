@@ -20,8 +20,7 @@ Synergy
     
         gem 'mysql2', '0.2.7'
         gem 'russian', :git => 'git://github.com/yaroslav/russian.git'
-        gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable' 
-        # либо gem 'spree', '>= 0.50.2'
+        gem 'spree', '~> 0.60.0'
         gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
         gem 'spree_static_content'
         gem 'spree_editor'
