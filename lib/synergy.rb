@@ -41,10 +41,19 @@ module Synergy
       # зарегистрировать калькулятор для доставки наложенным платежём
       Calculator::CashOnDelivery.register
       
-      # добавить событие для перехода от шага доставки к шагу завершения, минуя шаг оплаты
-      complete_event = StateMachine::Event.new(Order.state_machine, :complete_without_payment)
-      complete_event.transition(:to => 'complete')
-      Order.state_machine.events << complete_event
+      # добавить событие для перехода от шага доставки к шагу подтверждения, минуя шаг оплаты
+      confirm_event = StateMachine::Event.new(Order.state_machine, :confirm_without_payment)
+      confirm_event.transition :to => 'confirm'
+      Order.state_machine.events << confirm_event
+      
+      # переопределение события :next для отображения шага подтверждения в любом случае
+      next_event = StateMachine::Event.new(Order.state_machine, :next)
+      next_event.transition :from => 'cart',     :to => 'address'
+      next_event.transition :from => 'address',  :to => 'delivery'
+      next_event.transition :from => 'delivery', :to => 'payment'
+      next_event.transition :from => 'payment',  :to => 'confirm'
+      next_event.transition :from => 'confirm',  :to => 'complete'     
+      Order.state_machine.events << next_event
     end
 
     config.to_prepare &method(:activate).to_proc
