@@ -41,6 +41,8 @@ module Synergy
       # зарегистрировать калькулятор для доставки наложенным платежём
       Calculator::CashOnDelivery.register
       
+      PaymentMethod::SberBankInvoice.register
+      
       # добавить событие для перехода от шага доставки к шагу подтверждения, минуя шаг оплаты
       confirm_event = StateMachine::Event.new(Order.state_machine, :confirm_without_payment)
       confirm_event.transition :to => 'confirm'
