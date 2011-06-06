@@ -96,3 +96,11 @@ h2 {
   border-right-color: #999;
   border-bottom-color: #999;
 }
+
+a.button span, .actions a {
+  white-space: nowrap;
+}
+
+.toolbar {
+  margin-bottom: 0;
+}
