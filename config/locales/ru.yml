@@ -20,6 +20,10 @@ ru:
         few: "Адреса"
         other: "Адресов"
 
+  errors:
+    messages:
+      blank: "не может быть пустым"
+
   errors_prohibited_this_record_from_being_saved: 
     one: "1 ошибка не позволяет сохранить запись в базе"
     few: "%{count} ошибки не позволяют сохранить запись в базе"
