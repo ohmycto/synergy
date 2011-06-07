@@ -9,6 +9,7 @@ ul#shipping-specs li {
 
 #content {
   position: relative;
+  min-height: 640px;
 }
 
 input.format-y-m-d { width: 90% }
