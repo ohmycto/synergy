@@ -7,3 +7,4 @@ ru:
   settlement_acc: Расч. сч.
   recipient_bank: Банк получатель
   recipient_bank_city: Город банка получателя
+  print_sberbank_invoice: Напечатать квитанцию Сбербанка

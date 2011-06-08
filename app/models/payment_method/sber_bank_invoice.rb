@@ -35,6 +35,6 @@ class PaymentMethod::SberBankInvoice < PaymentMethod
   end
   
   def desc
-    "<p>#{I18n.t('sberbank_invoice')}</p>"
+    "<p>#{I18n.t('sberbank_invoice')}</p>".html_safe
   end
 end
