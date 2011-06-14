@@ -25,14 +25,14 @@
   </header>
   <section>
     <div id="content">
-      <h1>Заказ №<%= @order.number %> от <%= l(@order.completed_at, :short) %></h1>
+      <h1>Заказ №<%= @order.number %> от <%= @order.completed_at.to_s(:short) %></h1>
 
       <h2>Адрес доставки:</h2>
-      <div><%= @order.shipping_address.address1 %></div>
+      <div><%= @order.ship_address.address1 %></div>
 
       <h2>Контактное лицо</h2>
-      <div><%= @order.shipping_address.full_name %></div>
-      <div><%= @order.shipping_address.phone %></div>
+      <div><%= @order.ship_address.full_name %></div>
+      <div><%= @order.ship_address.phone %></div>
 
       <table class="order_line_items" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
         <colgroup>
