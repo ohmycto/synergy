@@ -25,12 +25,12 @@
   </header>
   <section>
     <div id="content">
-      <h1>Заказ №<%= @order.number %> от <%= @order.completed_at.to_s(:short) %></h1>
+      <h1>Заказ №<%= @order.number %> от <%= Russian::strftime(@order.completed_at, "%d %B %Y г.") %></h1>
 
       <h2>Адрес доставки:</h2>
       <div><%= @order.ship_address.address1 %></div>
 
-      <h2>Контактное лицо</h2>
+      <h2>Контактное лицо:</h2>
       <div><%= @order.ship_address.full_name %></div>
       <div><%= @order.ship_address.phone %></div>
 
@@ -57,8 +57,8 @@
       </table>
       <div id="total_desc">Всего наименований: <%= @order.line_items.count %></div>
       <div id="seller">
-        <div id="order_delivered">Заказ доставил ________________/______________/ &nbsp; "___" __________ 2011</div>
-        <div id="order_recieved">Заказ получил ________________/______________/ &nbsp; "___" __________ 2011</div>
+        <div id="order_delivered">Заказ доставил&nbsp;________________/______________/ &nbsp; "___" __________ 2011</div>
+        <div id="order_recieved">Заказ получил&nbsp;&nbsp;________________/______________/ &nbsp; "___" __________ 2011</div>
       </div>
     </div>
   </section>
