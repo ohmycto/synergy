@@ -2,6 +2,7 @@ ru:
   cash_on_delivery: "Наложенный платёж"
   sberbank_invoice: "Квитанция СберБанка"
   page_not_found: "Страница не найдена"
+  courier_instructions: "Поручение курьеру"
 
   activerecord:
     attributes:
