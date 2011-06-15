@@ -26,9 +26,9 @@ Admin::ProductsController.class_eval do
       end
 
       taxon_name = doc.css(".b-breadcrumbs a").last.content
-      price = doc.css(".price span").first.content.gsub(nbsp, '')
+      price = doc.css(".b-model-prices__avg span").first.content.gsub(nbsp, '')
       image_urls = doc.css("#model-pictures a").map{|link| link['href'] }
-      name = doc.css("#global-model-name").first.content
+      name = doc.css(".b-page-title").first.content
 
       p = Product.new(:name => name, :price => price)
       p.available_on = Time.now if params[:available]
@@ -50,8 +50,9 @@ Admin::ProductsController.class_eval do
           flash[:notice] = "Данные о товаре \"#{p.name}\" успешно скачены с Яндекс.Маркет"
         end
       end
-    rescue
-      flash[:error] = "Данные о товаре не удалось взять с Яндекс.Маркет, проверьте ID товара и наличие полной информации о нём по ссылке #{market_url}"
+    rescue Exception => error
+      flash[:notice] = "Данные о товаре не удалось взять с Яндекс.Маркет, проверьте ID товара и наличие полной информации о нём по ссылке #{market_url}."
+      flash[:error] = error.backtrace.find{|line| line =~ /#{__FILE__}/}.to_s + "(#{$!})"
     end
     redirect_to admin_products_path
   end
