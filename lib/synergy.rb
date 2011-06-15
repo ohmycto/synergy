@@ -27,6 +27,12 @@ module Synergy
         Spree::Config.set(:admin_interface_logo => "admin/logo.png")
         checkout_zone = Zone.first
         Spree::Config.set(:checkout_zone => checkout_zone.name) if checkout_zone
+        # store email address
+        Spree::Config.set(:store_email => 'test@site.ru') unless Spree::Config[:store_email]
+        # store phone
+        Spree::Config.set(:store_phone => '+7 (495) 1234567') unless Spree::Config[:store_phone]
+        # store address
+        #Spree::Config.set(:store_address => 'Somewhere st. Nowhere')
       end
       
       ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
