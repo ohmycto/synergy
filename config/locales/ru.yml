@@ -4,6 +4,14 @@ ru:
   page_not_found: "Страница не найдена"
   courier_instructions: "Поручение курьеру"
 
+  it_successfully_created: "%{resource} успешно создано!"
+  it_successfully_removed: "%{resource} успешно удалено!"
+  it_successfully_updated: "%{resource} успешно обновлено!"
+
+  she_successfully_created: "%{resource} успешно создана!"
+  she_successfully_removed: "%{resource} успешно удалена!"
+  she_successfully_updated: "%{resource} успешно обновлена!"
+
   activerecord:
     attributes:
       address:
