@@ -28,6 +28,55 @@ ru:
         one: "Адрес"
         few: "Адреса"
         other: "Адресов"
+        
+      adjustment:
+        one: Надбавка
+        other: Надбавки
+      calculator:
+        one: Калькулятор
+        other: Калькуляторы
+      configuration:
+        one: Конфигурация
+        other: Конфигурации
+      mail_method:
+        one: Метод отправки почты
+        other: Методы отправки почты
+      option_type:
+        one: Тип опции
+        other: Типы опций
+      option_value:
+        one: Значение опции
+        other: Значения опции
+      page:
+        one: Страница
+        other: Страницы
+      payment_method:
+        one: Способ оплаты
+        other: Способы оплаты
+      preference:
+        one: Настройка
+        other: Настройки
+      product_option_type:
+        one: Тип опции продукта
+        other: Типы опций продукта
+      product_property:
+        one: Свойство товара
+        other: Свойства товара
+      product_scope:
+        one: Фильтр
+        other: Фильтры
+      promotion:
+        one: Промо-акция
+        other: Промо-акции
+      promotion_rule:
+        one: Правило промо-акции
+        other: Правила промо-акции
+      shipping_method:
+        one: Способ доставки
+        other: Способы доставки
+      tracker:
+        one: Трекер
+        other: Трекеры
 
   errors:
     messages:
