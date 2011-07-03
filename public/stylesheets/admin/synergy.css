@@ -105,3 +105,5 @@ a.button span, .actions a {
 .toolbar {
   margin-bottom: 0;
 }
+
+#content form textarea { border: 1px solid #BBB; height: 150px; }
