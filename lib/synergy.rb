@@ -1,5 +1,19 @@
 # coding: utf-8
 require 'spree_core'
+require 'spree_auth'
+require 'spree_api'
+require 'spree_dash'
+require 'spree_promo'
+require 'spree_i18n'
+require 'spree_static_content'
+require 'spree_editor'
+require 'spree_online_support'
+require 'spree_robokassa'
+require 'spree_yandex_market'
+require 'spree_address_book'
+require 'spree_dynamic_sitemaps'
+require 'formtastic'
+
 require 'synergy_hooks'
 require 'ext/number_helper'
 
