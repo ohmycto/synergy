@@ -13,6 +13,7 @@ require 'spree_yandex_market'
 require 'spree_address_book'
 require 'spree_dynamic_sitemaps'
 require 'formtastic'
+require 'russian'
 
 require 'synergy_hooks'
 require 'ext/number_helper'
