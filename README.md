@@ -7,9 +7,9 @@ Synergy
 Установка
 =========
 
-1. Установите Rails 3.0.7
+1. Установите Rails 3.0.9
     
-        gem install rails -v 3.0.7
+        gem install rails -v 3.0.9
     
 1. Создайте новое приложение
     
@@ -18,19 +18,11 @@ Synergy
 1. Настройте подключение к базе данных (рекомендуется MySQL с адаптером mysql2)
 1. Добавьте в Gemfile следующие строки:
     
-        gem 'mysql2', '0.2.7'
-        gem 'russian', :git => 'git://github.com/yaroslav/russian.git'
-        gem 'spree', '~> 0.60.0'
+        gem 'mysql2', '~> 0.2.7'
+        gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
         gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
-        gem 'spree_static_content'
-        gem 'spree_editor'
-        gem 'spree_online_support'
-        gem 'spree_robokassa'
-        gem 'spree_yandex_market'
-        gem 'spree_address_book'
-        gem 'spree_dynamic_sitemaps'
-        gem 'synergy', '~> 0.50.0'
-        gem 'synergy_default_theme', '1.0.1'
+        gem 'synergy', '~> 0.60.0'
+        gem 'synergy_default_theme', '1.0.2'
     
 1. Выполните следующие команды:
     
@@ -41,7 +33,6 @@ Synergy
         rake synergy_default_theme:install
         rake db:migrate
         rake db:seed db:sample
-        rake db:admin:create
         rails s
 
 

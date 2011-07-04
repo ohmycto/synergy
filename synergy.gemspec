@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'synergy'
-  s.version     = '0.60.0.RC1'
+  s.version     = '0.60.0'
   s.summary     = 'Russian e-commerce solution based on Spree'
   s.description = ''
   s.required_ruby_version = '>= 1.8.7'
