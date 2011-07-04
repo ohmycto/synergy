@@ -50,8 +50,8 @@ module Synergy
         #Spree::Config.set(:store_address => 'Somewhere st. Nowhere')
       end
       
-      ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
-      ADDRESS_FIELDS.flatten!
+      ::ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
+      ::ADDRESS_FIELDS.flatten!
 
       String.class_eval do
         def to_url
