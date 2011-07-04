@@ -28,7 +28,6 @@ ru:
         one: "Адрес"
         few: "Адреса"
         other: "Адресов"
-        
       adjustment:
         one: Надбавка
         other: Надбавки
@@ -38,6 +37,9 @@ ru:
       configuration:
         one: Конфигурация
         other: Конфигурации
+      image:
+        one: Изображение
+        other: Изображения
       mail_method:
         one: Метод отправки почты
         other: Методы отправки почты
