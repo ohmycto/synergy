@@ -23,6 +23,17 @@ ru:
         usage_limit: "Ограничения"
         starts_at: "Начало"
         expires_at: "Истекает"
+      user:
+        juridical: "Юридическое лицо"
+        recipient: "Наименование организации"
+        juridical_address: "Адрес организации"
+        inn: "ИНН"
+        kpp: "КПП"
+        recipient_bank: "Банк получатель"
+        settlement_acc: "Расч. сч."
+        corr: "Корр. сч."
+        bik: "БИК"
+        nds: "Настройки НДС (с НДС/без НДС)"
     models: 
       address: 
         one: "Адрес"
@@ -129,3 +140,20 @@ ru:
     # am/pm решено перевести как "утра/вечера" :)
     am: "утра"
     pm: "вечера"
+
+  synergy_settings: "Настройки Synergy"
+  synergy_settings_desc: "Управление настройками Synergy"
+
+  juridical_settings: "Настройки юридического лица"
+  juridical_description: "Автоматизация работы с юридическими лицами"
+  enable_juridical: "Принимать заказы от юридических лиц"
+  juridical_director: "ФИО руководителя"
+  juridical_accountant: "ФИО главбуха"
+  juridical_name: "Наименование организации"
+  juridical_address: "Адрес организации"
+  juridical_bank: "Банк получатель"
+  nds: "Настройки НДС (с НДС/без НДС)"
+  juridical_invoice: "Счет для юридических лиц"
+  print_juridical_invoice: "Распечатать квитанцию на оплату"
+  juridical_info: "Юридическая информация"
+  juridical_disabled: "На текущий момент работа с юридическими лицами отключена, попробуйте сделать заказ позже."

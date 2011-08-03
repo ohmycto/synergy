@@ -1,0 +1,48 @@
+<p>
+	<%= label_tag 'preferences[juridical_enabled]', t('enable_juridical') %>:
+	<%= check_box_tag('preferences[juridical_enabled]', '1', @preferences['juridical_enabled']) %>
+</p>
+<p>
+<%= label_tag 'preferences[recipient]', t('juridical_name') %>:<br />
+<%= text_field_tag('preferences[recipient]', @preferences['recipient'])%>
+</p>
+<p>
+<%= label_tag 'preferences[address]', t('juridical_address') %>:<br />
+<%= text_field_tag('preferences[address]', @preferences['address'])%>
+</p>
+<p>
+<%= label_tag 'preferences[inn]', t('inn') %>:<br />
+<%= text_field_tag('preferences[inn]', @preferences['inn'])%>
+</p>
+<p>
+<%= label_tag 'preferences[kpp]', t('kpp') %>:<br />
+<%= text_field_tag('preferences[kpp]', @preferences['kpp'])%>
+</p>
+<p>
+<%= label_tag 'preferences[bank]', t('juridical_bank') %>:<br />
+<%= text_field_tag('preferences[bank]', @preferences['bank'])%>
+</p>
+<p>
+<%= label_tag 'preferences[settlement_acc]', t('settlement_acc') %>:<br />
+<%= text_field_tag('preferences[settlement_acc]', @preferences['settlement_acc'])%>
+</p>
+<p>
+<%= label_tag 'preferences[corr]', t('corr') %>:<br />
+<%= text_field_tag('preferences[corr]', @preferences['corr'])%>
+</p>
+<p>
+<%= label_tag 'preferences[bik]', t('bik') %>:<br />
+<%= text_field_tag('preferences[bik]', @preferences['bik'])%>
+</p>
+<p>
+<%= check_box_tag('preferences[nds]', true, @preferences['nds'])%>
+<%= label_tag 'preferences[nds]', t('nds') %>
+</p>
+<p>
+<%= label_tag 'preferences[director]', t('juridical_director') %>:<br />
+<%= text_field_tag('preferences[director]', @preferences['director'])%>
+</p>
+<p>
+<%= label_tag 'preferences[accountant]', t('juridical_accountant') %>:<br />
+<%= text_field_tag('preferences[accountant]', @preferences['accountant'])%>
+</p>

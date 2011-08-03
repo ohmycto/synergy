@@ -12,6 +12,9 @@
     <% end %>
   </p>
   <% if @order.payment_method.is_a?(PaymentMethod::SberBankInvoice) %>
-  <%= link_to t('print_sberbank_invoice'), orders_sberbank_invoice_path %>
+    <%= link_to t('print_sberbank_invoice'), orders_sberbank_invoice_path %>
+  <% end %>
+  <% if @order.payment_method.is_a?(PaymentMethod::JuridicalInvoice) %>
+    <%= link_to t('print_juridical_invoice'), orders_juridical_invoice_path %>
   <% end %>
 </div>

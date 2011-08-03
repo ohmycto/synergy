@@ -64,6 +64,10 @@ module Synergy
       
       PaymentMethod::SberBankInvoice.register
       
+      # добавление способа оплаты (и калькулятора для него) для юридических лиц
+      PaymentMethod::JuridicalInvoice.register
+      Calculator::Juridical.register
+      
       # добавить событие для перехода от шага доставки к шагу подтверждения, минуя шаг оплаты
       confirm_event = StateMachine::Event.new(Order.state_machine, :confirm_without_payment)
       confirm_event.transition :to => 'confirm'

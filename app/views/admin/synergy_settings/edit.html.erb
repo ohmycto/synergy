@@ -1,0 +1,13 @@
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<h1><%= t('synergy_settings') %></h1>
+
+<%= form_tag(admin_synergy_settings_path, :method => :put) do %>
+  <h2><%= t('juridical_settings') %></h2>
+  <%= render 'juridical_fields' %>
+
+  <p class="form-buttons">
+    <%= button t('update') %>
+    <%= t("or") %> <%= link_to t("cancel"), admin_synergy_settings_url %>
+  </p>
+<% end %>

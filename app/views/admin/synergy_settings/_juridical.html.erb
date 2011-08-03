@@ -1,0 +1,50 @@
+<table>
+  <tr>
+    <td><%= t('enable_juridical') %>:</td>
+    <td><%= @preferences['juridical_enabled'] ? t("yes") : t("no") %></td>
+  </tr>
+  <tr>
+    <td><%= t('juridical_name') %>:</td>
+    <td><%= @preferences['recipient'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('juridical_address') %>:</td>
+    <td><%= @preferences['address'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('inn') %>:</td>
+    <td><%= @preferences['inn'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('kpp') %>:</td>
+    <td><%= @preferences['kpp'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('juridical_bank') %>:</td>
+    <td><%= @preferences['bank'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('settlement_acc') %>:</td>
+    <td><%= @preferences['settlement_acc'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('corr') %>:</td>
+    <td><%= @preferences['corr'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('bik') %>:</td>
+    <td><%= @preferences['bik'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('nds') %>:</td>
+    <td><%= @preferences['nds'] ? t('yes') : t('no') %></td>
+  </tr>
+  <tr>
+    <td><%= t('juridical_director') %>:</td>
+    <td><%= @preferences['director'] %></td>
+  </tr>
+  <tr>
+    <td><%= t('juridical_accountant') %>:</td>
+    <td><%= @preferences['accountant'] %></td>
+  </tr>
+</table>

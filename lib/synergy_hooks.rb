@@ -11,4 +11,19 @@ class SecointHooks < Spree::ThemeSupport::HookListener
     <%= stylesheet_link_tag 'admin/inline_help.css', 'admin/synergy.css' %>
     )
   end
+  
+  insert_after :signup_below_password_fields, 'shared/juridical_user_fields'
+
+  insert_after :admin_configurations_menu do
+    %(<tr>
+      <td><%= link_to t("synergy_settings"), admin_synergy_settings_path %></td>
+      <td><%= t("synergy_settings_desc") %></td>
+    </tr>)
+  end
+  
+  insert_after :admin_configurations_sidebar_menu do
+    %(<li<%== ' class="active"' if controller.controller_name == 'synergy_settings' %>><%= link_to t("synergy_settings"), admin_synergy_settings_path %></li>)
+  end
+  
+  insert_after :admin_order_tabs, 'admin/orders/juridical_tabs'
 end

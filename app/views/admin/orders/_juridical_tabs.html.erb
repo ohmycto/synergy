@@ -1,0 +1,5 @@
+<% if @order.user.juridical? %>
+  <li<%== ' class="active"' if current == "Juridical Info" %>>
+    <%= link_to t('juridical_info'), orders_juridical_info_path(@order) %>
+  </li>
+<% end %>
