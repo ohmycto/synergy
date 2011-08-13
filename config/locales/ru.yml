@@ -129,3 +129,10 @@ ru:
     # am/pm решено перевести как "утра/вечера" :)
     am: "утра"
     pm: "вечера"
+
+  synergy_settings: "Настройки Synergy"
+  synergy_settings_desc: "Управление настройками Synergy"
+  
+  contacts_settings: "Контактная информация"
+  store_email: "E-mail магазина"
+  store_phone: "Телефон магазина"
