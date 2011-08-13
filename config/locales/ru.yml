@@ -157,3 +157,7 @@ ru:
   print_juridical_invoice: "Распечатать квитанцию на оплату"
   juridical_info: "Юридическая информация"
   juridical_disabled: "На текущий момент работа с юридическими лицами отключена, попробуйте сделать заказ позже."
+  
+  contacts_settings: "Контактная информация"
+  store_email: "E-mail магазина"
+  store_phone: "Телефон магазина"

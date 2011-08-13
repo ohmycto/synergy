@@ -1,7 +1,7 @@
 class SecointHooks < Spree::ThemeSupport::HookListener
   insert_before :admin_order_show_buttons do
     %(
-    <%= button_link_to t("courier_instructions"), orders_courier_instruction_path(@order) if @order.completed_at %>
+    <%= button_link_to t("courier_instructions"), orders_courier_instruction_path(@order), :target => "_blank" if @order.completed_at %>
     )
   end
 
