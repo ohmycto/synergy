@@ -1,9 +1,9 @@
 <%= render :partial => 'admin/shared/configuration_menu' %>
 
-<h1><%= t 'synergy_settings' %></h1>
+<h1><%= t('synergy_settings') %></h1>
 
 <%= form_tag(admin_synergy_settings_path, :method => :put) do %>
-  <h2><%= t 'contacts_settings' %></h2>
+  <h2><%= t('contacts_settings') %></h2>
   <%= render 'contacts_fields' %>
 
   <p class="form-buttons">
