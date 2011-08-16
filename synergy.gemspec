@@ -27,4 +27,5 @@ Gem::Specification.new do |s|
   s.add_dependency('spree_online_support', '~> 0.50.0')
   s.add_dependency('spree_address_book', '~> 0.50.1')
   s.add_dependency('spree_dynamic_sitemaps', '~> 0.50.1')
+  s.add_dependency('ru_propisju', '~> 1.1.0')
 end

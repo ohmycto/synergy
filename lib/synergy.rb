@@ -14,6 +14,7 @@ require 'spree_address_book'
 require 'spree_dynamic_sitemaps'
 require 'formtastic'
 require 'russian'
+require 'ru_propisju'
 
 require 'synergy_hooks'
 require 'ext/number_helper'
