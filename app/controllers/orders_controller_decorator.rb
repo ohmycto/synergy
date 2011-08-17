@@ -8,7 +8,7 @@ OrdersController.class_eval do
   def juridical_invoice
     @order = Order.find_by_number(params[:id])
     @user = @order.user
-    @preferences = Spree::Synergy::Config.get
+    @synergy_configuration = Spree::Synergy::Config.get
     render :layout => false
   end
 end

@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>СЧЕТ</title>
+<title>СЧЕТ № <%= @order.number %> от <%= @order.updated_at.strftime("%d.%m.%Y") %></title>
 <style type="text/css">
 p {
 font-family: Times New Roman; 
@@ -20,10 +20,10 @@ color: #FF0000;
 <table border="0" cellpadding="0" cellspacing="10" width="640">
       <tr>
         <td valign="top"><strong>Поставщик:</strong></td>
-        <td><strong><%= @preferences['recipient'] %></strong><br />
-        Банковские реквизиты:<br />Расчетный счет: <%= @preferences['settlement_acc'] %><br /><%= @preferences['bank'] %>,<br />БИК: <%= @preferences['bik'] %><br />к/с: <%= @preferences['corr'] %><br />
-        ИНН:&nbsp;<%= @preferences['inn'] %><br />
-		КПП:&nbsp;<%= @preferences['kpp'] %></td>
+        <td><strong><%= @synergy_configuration['recipient'] %></strong><br />
+        Банковские реквизиты:<br />Расчетный счет: <%= @synergy_configuration['settlement_acc'] %><br /><%= @synergy_configuration['bank'] %>,<br />БИК: <%= @synergy_configuration['bik'] %><br />к/с: <%= @synergy_configuration['corr'] %><br />
+        ИНН:&nbsp;<%= @synergy_configuration['inn'] %><br />
+		КПП:&nbsp;<%= @synergy_configuration['kpp'] %></td>
       </tr>
       <tr>
         <td valign="top"><strong>Плательщик:</strong></td>
@@ -64,14 +64,14 @@ color: #FF0000;
             <td colspan="3" width="80%" align="right">ИТОГО:&nbsp;</td>
             <td align="right" style="white-space:nowrap;"><%= number_to_currency @order.total %></td>
           </tr>
-          <% if @preferences['nds'] %>
+          <% if @synergy_configuration['nds'] %>
             <tr>
               <td colspan="3" width="80%" align="right">В том числе НДС 18%</td>
               <td align="right" style="white-space:nowrap;"><%= "%.2f" % ((@order.total / 118.0) * 18) %> руб.</td>
             </tr>
           <% else %>
             <tr>
-              <td colspan="2" width="80%" align="right"><span style="color:red; font-weight:bold;">Без налога (НДС)</td>
+              <td colspan="3" width="80%" align="right">Без налога (НДС)</td>
               <td align="right" style="white-space:nowrap;">&ndash;</td>
             </tr>
           <% end %>
@@ -90,7 +90,7 @@ color: #FF0000;
       <tr>
         <td valign="top" width="50%"><br /><br /><br />Руководитель<br /><br /><br /><br /><br />Главный&nbsp;бухгалтер</td>
         <td valign="top"><img src="/images/invoice_stamp.jpg" width="310" height="210" alt="" /></td>
-        <td valign="top" width="50%" style="white-space:nowrap"><br /><br /><br /><%= @preferences['director'] %><br /><br /><br /><br /><br /><%= @preferences['accountant'] %></td>
+        <td valign="top" width="50%" style="white-space:nowrap"><br /><br /><br /><%= @synergy_configuration['director'] %><br /><br /><br /><br /><br /><%= @synergy_configuration['accountant'] %></td>
       </tr>
 </table>
 </div>

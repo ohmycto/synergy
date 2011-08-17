@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   namespace :admin do
     resource :synergy_settings, :only => [:show, :edit, :update]
   end
-  match "/orders/:id/juridical_invoice" => "orders#juridical_invoice", :as => :orders_juridical_invoice
+  
   match "/admin/orders/:id/juridical_info" => "admin/orders#juridical_info", :as => :orders_juridical_info
+  match "/orders/:id/juridical_invoice" => "orders#juridical_invoice", :as => :orders_juridical_invoice
+  
+  resource :account, :controller => "users" do
+    get :edit_status
+    put :update_status
+  end
+  
 end

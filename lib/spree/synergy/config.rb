@@ -3,7 +3,7 @@ module Spree
     class Config
       include Singleton
       include PreferenceAccess
-
+      
       class << self
         def instance
           return nil unless ActiveRecord::Base.connection.tables.include?('configurations')

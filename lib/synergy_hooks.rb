@@ -12,8 +12,6 @@ class SecointHooks < Spree::ThemeSupport::HookListener
     )
   end
   
-  insert_after :signup_below_password_fields, 'shared/juridical_user_fields'
-
   insert_after :admin_configurations_menu do
     %(<tr>
       <td><%= link_to t("synergy_settings"), admin_synergy_settings_path %></td>
@@ -26,4 +24,6 @@ class SecointHooks < Spree::ThemeSupport::HookListener
   end
   
   insert_after :admin_order_tabs, 'admin/orders/juridical_tabs'
+  
+  insert_after :account_summary, 'users/status'
 end

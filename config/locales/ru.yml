@@ -33,7 +33,22 @@ ru:
         settlement_acc: "Расч. сч."
         corr: "Корр. сч."
         bik: "БИК"
-        nds: "Настройки НДС (с НДС/без НДС)"
+        nds: "Настройки НДС"
+        w_nds: "НДС 18%"
+        wo_nds: "без НДС"
+      synergy_configuration:
+        preferred_juridical_enabled: "Принимать заказы от юридических лиц"
+        preferred_recipient: "Наименование организации"
+        preferred_address: "Адрес организации"
+        preferred_inn: "ИНН"
+        preferred_kpp: "КПП"
+        preferred_bank: "Банк получатель"
+        preferred_settlement_acc: "Расч. сч."
+        preferred_corr: "Корр.сч."
+        preferred_bik: "БИК"
+        preferred_nds: "Настройки НДС"
+        preferred_director: "ФИО руководителя"
+        preferred_accountant: "ФИО главного бухгалтера"
     models: 
       address: 
         one: "Адрес"
@@ -146,18 +161,19 @@ ru:
 
   juridical_settings: "Настройки юридического лица"
   juridical_description: "Автоматизация работы с юридическими лицами"
-  enable_juridical: "Принимать заказы от юридических лиц"
-  juridical_director: "ФИО руководителя"
-  juridical_accountant: "ФИО главбуха"
-  juridical_name: "Наименование организации"
-  juridical_address: "Адрес организации"
-  juridical_bank: "Банк получатель"
-  nds: "Настройки НДС (с НДС/без НДС)"
+
+  w_nds: "НДС 18%"
+  wo_nds: "без НДС"
   juridical_invoice: "Счет для юридических лиц"
-  print_juridical_invoice: "Распечатать квитанцию на оплату"
+  print_juridical_invoice: "Распечатать счет на оплату"
   juridical_info: "Юридическая информация"
   juridical_disabled: "На текущий момент работа с юридическими лицами отключена, попробуйте сделать заказ позже."
-  
+
   contacts_settings: "Контактная информация"
   store_email: "E-mail магазина"
   store_phone: "Телефон магазина"
+
+  account_status: "Статус аккаунта"
+  edit_account_status: "Редактирование статуса аккаунта"
+  juridical: "юридическое лицо"
+  physical: "физическое лицо"

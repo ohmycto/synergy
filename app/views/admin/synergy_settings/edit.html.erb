@@ -2,12 +2,14 @@
 
 <h1><%= t('synergy_settings') %></h1>
 
-<%= form_tag(admin_synergy_settings_path, :method => :put) do %>
-  <h2><%= t('juridical_settings') %></h2>
-  <%= render 'juridical_fields' %>
+<%= render "shared/error_messages", :target => @synergy_configuration %>
 
-  <h2><%= t('contacts_settings') %></h2>
+<%= form_for @synergy_configuration, :url => admin_synergy_settings_path, :method => :put do |f| %>
+  <h2><%= t(:contacts_settings) %></h2>
   <%= render 'contacts_fields' %>
+
+  <h2><%= t(:juridical_settings) %></h2>
+  <%= render 'juridical_fields', :f => f %>
 
   <p class="form-buttons">
     <%= button t('update') %>

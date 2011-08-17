@@ -1,0 +1,46 @@
+<p>
+  <%= check_box_tag "user[juridical]", true, @user.juridical?, :onclick => "$('#user_juridical_data').toggle();" %>
+  <%= label_tag "user_juridical", User.human_attribute_name('juridical') %>
+</p>
+
+<div id="user_juridical_data" style="display: <%= @user.juridical? ? "block" : "none" %>;">
+  <p>
+    <%= label_tag "user_recipient", User.human_attribute_name('recipient') %><br />
+    <%= text_field_tag "user[recipient]", @user.recipient %>
+  </p>
+  <p>
+    <%= label_tag "user_juridical_address", User.human_attribute_name('juridical_address') %><br />
+    <%= text_field_tag "user[juridical_address]", @user.juridical_address %>
+  </p>
+  <p>
+    <%= label_tag "user_inn", User.human_attribute_name('inn') %><br />
+    <%= text_field_tag "user[inn]", @user.inn, :maxlength => 10 %>
+  </p>
+  <p>
+    <%= label_tag "user_kpp", User.human_attribute_name('kpp') %><br />
+    <%= text_field_tag "user[kpp]", @user.kpp, :maxlength => 9 %>
+  </p>
+  <p>
+    <%= label_tag "user_recipient_bank", User.human_attribute_name('recipient_bank') %><br />
+    <%= text_field_tag "user[recipient_bank]", @user.recipient_bank %>
+  </p>
+  <p>
+    <%= label_tag "user_settlement_acc", User.human_attribute_name('settlement_acc') %><br />
+    <%= text_field_tag "user[settlement_acc]", @user.settlement_acc, :maxlength => 20 %>
+  </p>
+  <p>
+    <%= label_tag "user_corr", User.human_attribute_name('corr') %><br />
+    <%= text_field_tag "user[corr]", @user.corr, :maxlength => 20 %>
+  </p>
+  <p>
+    <%= label_tag "user_bik", User.human_attribute_name('bik') %><br />
+    <%= text_field_tag "user[bik]", @user.bik, :maxlength => 9 %>
+  </p>
+  <p>
+    <%= label_tag "user_nds", User.human_attribute_name('nds') %>:<br />
+    <%= radio_button_tag "user[nds]", false, !@user.nds %>
+    <%= label_tag 'user[nds]', User.human_attribute_name('wo_nds') %>&nbsp;
+    <%= radio_button_tag "user[nds]", true, @user.nds %>
+    <%= label_tag 'user[nds]', User.human_attribute_name('w_nds') %>
+  </p>
+</div>
