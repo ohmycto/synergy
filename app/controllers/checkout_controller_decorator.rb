@@ -9,13 +9,13 @@ CheckoutController.class_eval do
   end
   
   def before_delivery
-    if current_user.juridical?
+    if current_user && current_user.juridical?
       @order.rate_hash.delete_if { |rh| rh[:shipping_method].calculator.class.name == "Calculator::CashOnDelivery" }
     end
   end
   
   def before_payment
-    if current_user.juridical?
+    if current_user && current_user.juridical?
       if Spree::Synergy::Config[:juridical_enabled]
         # keep only juridical pm
         @order.available_payment_methods.delete_if { |pm| pm.class.name != "PaymentMethod::JuridicalInvoice" }
