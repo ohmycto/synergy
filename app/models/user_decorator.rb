@@ -1,5 +1,5 @@
 User.class_eval do
-  validates :recipient, :juridical_address, :inn, :kpp, :recipient_bank,
+  validates :recipient, :juridical_address, :inn, :recipient_bank,
             :settlement_acc, :corr, :bik, :presence => true, :if => :is_juridical?
   validates :inn, :numericality => true, :length => { :is => 10 }, :if => :is_juridical?
   validates :kpp, :bik, :numericality => true, :length => { :is => 9 }, :if => :is_juridical?
