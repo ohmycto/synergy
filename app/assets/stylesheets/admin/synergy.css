@@ -1,3 +1,9 @@
+/*
+ * This is a manifest file that includes stylesheets for synergy
+ *= require admin/inline_help
+ *= require_self
+*/
+
 ul#shipping-specs label {
   display: block;
 }
@@ -51,7 +57,7 @@ h2 {
 }
 
 #admin-menu {
-  background: url("../../images/admin/bg/admin_menu_back.png") repeat-x scroll left top;
+  background: url("/assets/admin/bg/admin_menu_back.png") repeat-x scroll left top;
   border-bottom: none;
   border-right: none;
   border-top: 1px solid white;
@@ -77,7 +83,7 @@ h2 {
 }
 
 #sub-menu {
-  background: url("../../images/admin/bg/admin_sub_menu_back.png") repeat-x scroll left top;
+  background: url("/assets/admin/bg/admin_sub_menu_back.png") repeat-x scroll left top;
   border-top: 1px solid black;
   box-shadow: #A1A1A1 0 -1px 0;
   border-left: none;

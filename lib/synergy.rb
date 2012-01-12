@@ -8,7 +8,7 @@ require 'spree_i18n'
 require 'spree_static_content'
 require 'spree_editor'
 require 'spree_online_support'
-require 'spree_robokassa'
+#require 'spree_robokassa'
 require 'spree_yandex_market'
 require 'spree_address_book'
 require 'spree_dynamic_sitemaps'
@@ -16,12 +16,12 @@ require 'formtastic'
 require 'russian'
 require 'ru_propisju'
 
-require 'synergy_hooks'
 require 'ext/number_helper'
 
 module Synergy
   class Engine < Rails::Engine
-
+    engine_name 'synergy'
+    
     config.autoload_paths += %W(#{config.root}/lib)
 
     def self.activate
@@ -60,14 +60,6 @@ module Synergy
         end
      	end
      	
-      # зарегистрировать калькулятор для доставки наложенным платежём
-      Calculator::CashOnDelivery.register
-      
-      PaymentMethod::SberBankInvoice.register
-      
-      # добавление способа оплаты (и калькулятора для него) для юридических лиц
-      PaymentMethod::JuridicalInvoice.register
-      Calculator::Juridical.register
       
       # добавить событие для перехода от шага доставки к шагу подтверждения, минуя шаг оплаты
       confirm_event = StateMachine::Event.new(Order.state_machine, :confirm_without_payment)
@@ -85,5 +77,25 @@ module Synergy
     end
 
     config.to_prepare &method(:activate).to_proc
+    
+    initializer "spree.register.calculators" do |app|
+      app.config.spree.calculators.shipping_methods = [
+          Calculator::FlatPercentItemTotal,
+          Calculator::FlatRate,
+          Calculator::CashOnDelivery,
+          Calculator::Juridical,
+          Calculator::FlexiRate,
+          Calculator::PerItem,
+          Calculator::PriceBucket]
+    end
+    
+    initializer "spree.register.payment_methods" do |app|
+      app.config.spree.payment_methods = [
+          Gateway::Bogus,
+          Gateway::PayPal,
+          PaymentMethod::Check,
+          PaymentMethod::SberBankInvoice,
+          PaymentMethod::JuridicalInvoice ]
+    end
   end
 end
