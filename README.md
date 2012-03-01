@@ -7,9 +7,9 @@ Synergy
 Установка
 =========
 
-1. Установите Rails 3.0.9
+1. Установите Rails 3.1.3
     
-        gem install rails -v 3.0.9
+        gem install rails -v 3.1.3
     
 1. Создайте новое приложение
     
@@ -35,15 +35,6 @@ Synergy
         rails g synergy:install
         rake db:migrate
         rake db:seed db:sample
-        rails s
-
-
-Обновление
-==========
-
-        bundle update
-        rake synergy:install
-        rake db:migrate
         rails s
     
 
