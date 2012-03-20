@@ -20,7 +20,7 @@
       <div class="site_url"><%= Spree::Config[:site_url] %></div>
       <div class="store_email"><%= Spree::Config[:store_email] %></div>
       <div class="store_phone"><%= Spree::Config[:store_phone] %></div>
-      
+
     </div>
   </header>
   <section>
@@ -28,8 +28,11 @@
       <h1>Заказ №<%= @order.number %> от <%= Russian::strftime(@order.completed_at, "%d %B %Y г.") %></h1>
 
       <h2>Адрес доставки:</h2>
-      <div><%= @order.ship_address.address1 %></div>
-
+      <div>
+        <%= @order.ship_address.address1 %>
+        <%= "<br />#{@order.ship_address.address2}".html_safe unless @order.ship_address.address2.blank? %>
+        <%= "<br />#{@order.ship_address.city}, #{@order.ship_address.state_text}, #{@order.ship_address.zipcode}, #{@order.ship_address.country.name}".html_safe %>
+      </div>
       <h2>Контактное лицо:</h2>
       <div><%= @order.ship_address.full_name %></div>
       <div><%= @order.ship_address.phone %></div>
@@ -50,7 +53,7 @@
         <tr>
           <td><%= index + 1 %></td>
           <td><%= li.product.name %></td>
-          <td style="text-align: right"><%= li.quantity %></td>
+          <td style="text-align: right;"><%= li.quantity %></td>
         </tr>
         <% end %>
         <% end %>
@@ -66,3 +69,4 @@
 <script type="text/javascript"> window.print(); </script>
 </body>
 </html>
+
