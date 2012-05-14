@@ -21,7 +21,7 @@ require 'ext/number_helper'
 module Synergy
   class Engine < Rails::Engine
     engine_name 'synergy'
-    
+
     config.autoload_paths += %W(#{config.root}/lib)
 
     def self.activate
@@ -50,7 +50,7 @@ module Synergy
         # store address
         #Spree::Config.set(:store_address => 'Somewhere st. Nowhere')
       end
-      
+
       ::ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]
       ::ADDRESS_FIELDS.flatten!
 
@@ -59,25 +59,25 @@ module Synergy
           self.parameterize
         end
      	end
-     	
-      
+
+
       # добавить событие для перехода от шага доставки к шагу подтверждения, минуя шаг оплаты
       confirm_event = StateMachine::Event.new(Order.state_machine, :confirm_without_payment)
       confirm_event.transition :to => 'confirm'
       Order.state_machine.events << confirm_event
-      
+
       # переопределение события :next для отображения шага подтверждения в любом случае
       next_event = StateMachine::Event.new(Order.state_machine, :next)
       next_event.transition :from => 'cart',     :to => 'address'
       next_event.transition :from => 'address',  :to => 'delivery'
       next_event.transition :from => 'delivery', :to => 'payment'
       next_event.transition :from => 'payment',  :to => 'confirm'
-      next_event.transition :from => 'confirm',  :to => 'complete'     
+      next_event.transition :from => 'confirm',  :to => 'complete'
       Order.state_machine.events << next_event
     end
 
     config.to_prepare &method(:activate).to_proc
-    
+
     initializer "spree.register.calculators" do |app|
       app.config.spree.calculators.shipping_methods = [
           Calculator::FlatPercentItemTotal,
@@ -85,10 +85,9 @@ module Synergy
           Calculator::CashOnDelivery,
           Calculator::Juridical,
           Calculator::FlexiRate,
-          Calculator::PerItem,
-          Calculator::PriceBucket]
+          Calculator::PerItem]
     end
-    
+
     initializer "spree.register.payment_methods" do |app|
       app.config.spree.payment_methods = [
           Gateway::Bogus,
@@ -99,3 +98,4 @@ module Synergy
     end
   end
 end
+
