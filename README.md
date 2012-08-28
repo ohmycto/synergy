@@ -7,26 +7,25 @@ Synergy
 Установка
 =========
 
-1. Установите Rails 3.1.3
-    
-        gem install rails -v 3.1.3
-    
+1. Установите Rails 3.1.6
+
+        gem install rails -v 3.1.6
+
 1. Создайте новое приложение
-    
-        rails new synergy_app -GJTq
-    
+
+        rails _3.1.6_ new synergy_app -GJTq
+
 1. Настройте подключение к базе данных (рекомендуется MySQL с адаптером mysql2)
 1. Добавьте в Gemfile следующие строки:
-    
+
         gem 'mysql2', '~> 0.3.11'
-        gem 'active_reload'
-        gem 'synergy', '~> 0.70.0', :git => 'git://github.com/secoint/synergy.git'
-        gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
-        gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git', :branch => '0-70-stable'
-        # gem 'synergy_default_theme', '~> 1.0.2'
-    
-1. Выполните следующие команды:
-    
+        gem 'spree', :git => 'git://github.com/secoint/spree.git', :branch => '0-70-stable'
+        gem 'spree_i18n', :git => 'git://github.com/secoint/spree_i18n.git'
+        gem 'synergy', :git => 'git://github.com/secoint/synergy.git', :branch => '0-70-stable'
+        gem 'synergy_default_theme', :git => 'https://github.com/romul/synergy_default_theme.git', :branch => '0-70-x'
+
+1. Выполните следующие команды для установки расширений и заполнения базы начальными данными:
+
         bundle install
         rails g spree:site
         rails g spree_static_content:install
@@ -36,6 +35,7 @@ Synergy
         rake db:migrate
         rake db:seed db:sample
         rails s
-    
 
-Copyright (c) 2011 Roman Smirnov, released under the GNU GPL v3
+
+Copyright (c) 2012 Roman Smirnov, Denis Lukyanov, Service & Consulting, released under the GNU GPL v3
+
