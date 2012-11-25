@@ -37,7 +37,7 @@ margin:3px 0 10px;}
       </tr>
         <td colspan="3">
           Получатель платежа: <%= @preferences['recipient'] %><br />
-          ИНН <%= @preferences['inn'] %> / КПП <%= @preferences['kpp'] %><br />
+          ИНН <%= @preferences['inn'] %> <% if @preferences['kpp'] and !@preferences['kpp'].empty? %>/ КПП <%= @preferences['kpp'] %><% end %><br />
           Корр.сч. <%= @preferences['corr'] %> БИК <%= @preferences['bik'] %><br />
           Расч. сч. <%= @preferences['settlement_acc'] %> в <%= @preferences['recipient_bank'] %>, г.&nbsp;<%= @preferences['recipient_bank_city'] %>
         </td>
