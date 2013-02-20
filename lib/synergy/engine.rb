@@ -19,6 +19,8 @@ module Synergy
       I18n.default_locale = :ru
       Spree::Config.default_country_id = 168
       Spree::Config.currency = 'RUB'
+      checkout_zone = Spree::Zone.first
+      Spree::Config.set(:checkout_zone => checkout_zone.name) if checkout_zone
     end
 
     config.to_prepare &method(:activate).to_proc
