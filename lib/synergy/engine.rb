@@ -17,6 +17,7 @@ module Synergy
       end
 
       I18n.default_locale = :ru
+      Spree::Config.default_country_id = 168
     end
 
     config.to_prepare &method(:activate).to_proc
