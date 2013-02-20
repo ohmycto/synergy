@@ -1,21 +1,32 @@
 Synergy
 ============
 
-Introduction goes here.
 
+Установка
+============
 
-Example
-=======
+1. Установите Rails 3.2.12
+    
+        gem install rails -v 3.2.12
+    
+1. Создайте новое приложение
+    
+        rails new synergy_app
+    
+1. Настройте подключение к базе данных (рекомендуется MySQL с адаптером mysql2)
+1. Добавьте в Gemfile следующие строки:
+        
+        gem 'russian'
+        gem 'spree', '~> 1.3.0'
+        gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise', :branch => '1-3-stable'
+        gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :branch => '1-3-stable'
+        gem 'synergy', :git => 'git://github.com/secoint/synergy.git', :branch => '1-3-x'
+    
+1. Выполните следующие команды:
+    
+        bundle install
+        rails g synergy:install
 
-Example goes here.
+1. Аналогично Spree, можно использовать следующие параметры (по умолчанию true):
 
-Testing
--------
-
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
-
-    $ bundle
-    $ bundle exec rake test_app
-    $ bundle exec rspec spec
-
-Copyright (c) 2013 [name of extension creator], released under the New BSD License
+        rails g synergy:install --migrate=false --sample=false --seed=false
