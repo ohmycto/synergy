@@ -18,4 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '~> 1.3.0'
   s.add_dependency 'spree_auth_devise'
+  s.add_dependency 'spree_i18n'
+  s.add_dependency 'russian'
 end
