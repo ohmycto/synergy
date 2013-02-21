@@ -47,6 +47,7 @@ module Synergy
         if @load_sample_data
           say_status :loading, 'sample data'
           quietly { rake 'spree_sample:load' }
+          quietly { Spree::Price.update_all(:currency => 'RUB') }
         end
       end
 
