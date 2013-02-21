@@ -26,7 +26,7 @@ module Synergy
 
       def install_spree_editor
         say_status :installing, 'CKEditor'
-        generate 'ckeditor:install --orm=active_record --backend=paperclip'
+        quietly { generate 'ckeditor:install --orm=active_record --backend=paperclip' }
       end
 
       def install_synergy_inventory_management
