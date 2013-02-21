@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_editor', '>= 1.0.1'
   s.add_dependency 'synergy_inventory_management', '~> 1.3.0'
   s.add_dependency 'spree_static_content'
+  s.add_dependency 'spree_online_support', '~> 1.3.0'
 end

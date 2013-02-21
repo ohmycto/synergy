@@ -40,6 +40,11 @@ module Synergy
         quietly { generate 'synergy_inventory_management:install' }
       end
 
+      def install_spree_online_support
+        say_status :installing, 'Spree Online Support'
+        # nothing to do
+      end
+
       def run_migrations
         if @run_migrations
           say_status :running, 'migrations'
