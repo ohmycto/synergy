@@ -17,16 +17,31 @@ module Synergy
       end
 
       def install_spree
-        generate "spree:install --migrate=#{@run_migrations} --seed=false --sample=#{@load_sample_data} --user_class=Spree::User"
+        generate "spree:install --migrate=false --seed=false --sample=false --user_class=Spree::User"
       end
 
       def replace_seed_data
         gsub_file(File.join(Rails.root, 'db', 'seeds.rb'), /#{Regexp.escape('Spree::Core::Engine.load_seed if defined?(Spree::Core)')}/, "Synergy::Engine.load_seed")
       end
 
+      def run_migrations
+        if @run_migrations
+          say_status :running, 'migrations'
+          quietly { rake 'db:migrate' }
+        end
+      end
+
       def load_seed_data
         if @load_seed_data
+          say_status :loading,  'seed data'
           rake 'db:seed'
+        end
+      end
+
+      def load_sample_data
+        if @load_sample_data
+          say_status :loading, 'sample data'
+          quietly { rake 'spree_sample:load' }
         end
       end
 
