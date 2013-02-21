@@ -21,7 +21,7 @@ module Synergy
       end
 
       def replace_seed_data
-        gsub_file(File.join(Rails.root, 'db', 'seeds.rb'), /#{Regexp.escape('Spree::Core::Engine.load_seed if defined?(Spree::Core)')}/, "Synergy::Engine.load_seed")
+        quietly { gsub_file(File.join(Rails.root, 'db', 'seeds.rb'), /#{Regexp.escape('Spree::Core::Engine.load_seed if defined?(Spree::Core)')}/, "Synergy::Engine.load_seed") }
       end
 
       def install_spree_editor
