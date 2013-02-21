@@ -17,11 +17,17 @@ module Synergy
       end
 
       def install_spree
+        say_status :installing, 'Spree'
         generate "spree:install --migrate=false --seed=false --sample=false --user_class=Spree::User"
       end
 
       def replace_seed_data
         quietly { gsub_file(File.join(Rails.root, 'db', 'seeds.rb'), /#{Regexp.escape('Spree::Core::Engine.load_seed if defined?(Spree::Core)')}/, "Synergy::Engine.load_seed") }
+      end
+
+      def install_spree_static_content
+        say_status :installing, 'Spree Static Content'
+        # no need to do anything, migrations will be copied during Spree installation
       end
 
       def install_spree_editor
