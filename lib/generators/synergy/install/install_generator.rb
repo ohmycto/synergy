@@ -29,6 +29,11 @@ module Synergy
         generate 'ckeditor:install --orm=active_record --backend=paperclip'
       end
 
+      def install_synergy_inventory_management
+        say_status :installing, 'Synergy Inventory Management'
+        quietly { generate 'synergy_inventory_management:install' }
+      end
+
       def run_migrations
         if @run_migrations
           say_status :running, 'migrations'

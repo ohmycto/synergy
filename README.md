@@ -22,6 +22,7 @@ Synergy
         gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :branch => '1-3-stable'
         gem 'ckeditor'
         gem 'spree_editor', :git => 'git://github.com/secoint/spree_editor.git'
+        gem 'synergy_inventory_management', :git => 'git://github.com/secoint/synergy_inventory_management.git'
         gem 'synergy', :git => 'git://github.com/secoint/synergy.git', :branch => '1-3-x'
     
 1. Выполните следующие команды:
