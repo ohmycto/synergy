@@ -24,6 +24,11 @@ module Synergy
         gsub_file(File.join(Rails.root, 'db', 'seeds.rb'), /#{Regexp.escape('Spree::Core::Engine.load_seed if defined?(Spree::Core)')}/, "Synergy::Engine.load_seed")
       end
 
+      def install_spree_editor
+        say_status :installing, 'CKEditor'
+        generate 'ckeditor:install --orm=active_record --backend=paperclip'
+      end
+
       def run_migrations
         if @run_migrations
           say_status :running, 'migrations'
