@@ -23,6 +23,7 @@ module Synergy
         checkout_zone = Spree::Zone.first
         Spree::Config.set(:checkout_zone => checkout_zone.name) if checkout_zone
       end
+      Spree::AddressBook::Config.disable_bill_address = true
     end
 
     config.to_prepare &method(:activate).to_proc
