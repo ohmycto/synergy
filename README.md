@@ -25,6 +25,7 @@ Synergy
         gem 'spree_editor', :git => 'git://github.com/secoint/spree_editor.git'
         gem 'synergy_inventory_management', :git => 'git://github.com/secoint/synergy_inventory_management.git'
         gem 'spree_online_support', :git => 'git://github.com/secoint/spree_online_support.git'
+        gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git'
         gem 'synergy', :git => 'git://github.com/secoint/synergy.git', :branch => '1-3-x'
     
 1. Выполните следующие команды:

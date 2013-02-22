@@ -45,6 +45,11 @@ module Synergy
         # nothing to do
       end
 
+      def install_spree_address_book
+        say_status :installing, 'Spree Address Book'
+        quietly { generate 'spree_address_book:install' }
+      end
+
       def run_migrations
         if @run_migrations
           say_status :running, 'migrations'
