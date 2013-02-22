@@ -71,8 +71,17 @@ module Synergy
       def load_sample_data
         if @load_sample_data
           say_status :loading, 'sample data'
-          quietly { rake 'spree_sample:load' }
-          quietly { Spree::Price.update_all(:currency => 'RUB') }
+          quietly { 
+            rake 'spree_sample:load' 
+            Spree::Price.update_all(:currency => 'RUB') 
+            [Spree::ShippingMethod, Spree::TaxRate].each do |klass|
+              klass.update_all(:zone_id => 1) 
+            end
+            Spree::Preference.connection.schema_cache.clear!
+            Spree::ShippingMethod.all.each do |sm|
+              sm.calculator.preferred_currency = 'RUB'
+            end
+          }
         end
       end
 
