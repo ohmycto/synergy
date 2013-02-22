@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Поручение курьеру</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+
+  <%= stylesheet_link_tag 'admin/reset' %>
+  <%= stylesheet_link_tag 'admin/courier_instruction', :media => :all %>
+
+</head>
+<body>
+<div id="main">
+  <header>
+    <div id="header">
+      <h1><%= Spree::Config[:site_name] %></h1>
+
+      <div class="site_url"><%= Spree::Config[:site_url] %></div>
+      <div class="store_email"><%= Spree::Config[:store_email] %></div>
+      <div class="store_phone"><%= Spree::Config[:store_phone] %></div>
+
+    </div>
+  </header>
+  <section>
+    <div id="content">
+      <h1>Заказ №<%= @order.number %> от <%= Russian::strftime(@order.completed_at, "%d %B %Y г.") %></h1>
+
+      <h2>Адрес доставки:</h2>
+      <div>
+        <%= @order.ship_address.address1 %>
+        <%= "<br />#{@order.ship_address.address2}".html_safe unless @order.ship_address.address2.blank? %>
+        <%= "<br />#{@order.ship_address.city}, #{@order.ship_address.state_text}, #{@order.ship_address.zipcode}, #{@order.ship_address.country.name}".html_safe %>
+      </div>
+      <h2>Контактное лицо:</h2>
+      <div><%= @order.ship_address.full_name %></div>
+      <div><%= @order.ship_address.phone %></div>
+
+      <table class="order_line_items" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+        <colgroup>
+          <col width="50"/>
+          <col/>
+          <col width="100"/>
+        </colgroup>
+        <tr>
+          <th>№</th>
+          <th>Наименование товара</th>
+          <th>Кол-во</th>
+        </tr>
+        <% if @order.line_items.any? %>
+        <% @order.line_items.each_with_index do |li, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= li.product.name %></td>
+          <td style="text-align: right;"><%= li.quantity %></td>
+        </tr>
+        <% end %>
+        <% end %>
+      </table>
+      <div id="total_desc">Всего наименований: <%= @order.line_items.count %></div>
+      <div id="seller">
+        <div id="order_delivered">Заказ доставил&nbsp;________________/______________/ &nbsp; "___" __________ 2011</div>
+        <div id="order_recieved">Заказ получил&nbsp;&nbsp;________________/______________/ &nbsp; "___" __________ 2011</div>
+      </div>
+    </div>
+  </section>
+</div>
+<script type="text/javascript"> window.print(); </script>
+</body>
+</html>
+
