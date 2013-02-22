@@ -5,4 +5,5 @@ zones_001:
   updated_at: <%= Time.zone.now.to_s(:db) %>
   id: "1"
   description: "Российская Федерация"
+  zone_members_count: "1"
 

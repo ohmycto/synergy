@@ -4,4 +4,4 @@ zone_members_01:
   created_at: <%= Time.zone.now.to_s(:db) %>
   updated_at: <%= Time.zone.now.to_s(:db) %>
   zone_id: "1"
-  zoneable_type: Country
+  zoneable_type: Spree::Country
