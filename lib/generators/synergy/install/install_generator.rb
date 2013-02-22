@@ -27,7 +27,7 @@ module Synergy
 
       def install_spree_static_content
         say_status :installing, 'Spree Static Content'
-        # no need to do anything, migrations will be copied during Spree installation
+        # no need to do anything, migrations are copied during Spree installation
       end
 
       def install_spree_editor
@@ -47,7 +47,11 @@ module Synergy
 
       def install_spree_address_book
         say_status :installing, 'Spree Address Book'
-        quietly { generate 'spree_address_book:install' }
+        quietly {
+          # generate 'spree_address_book:install'
+          append_file "app/assets/javascripts/store/all.js", "//= require store/spree_address_book\n"
+          inject_into_file "app/assets/stylesheets/store/all.css", " *= require store/spree_address_book\n", :before => /\*\//, :verbose => true
+        }
       end
 
       def run_migrations
