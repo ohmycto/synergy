@@ -14,16 +14,16 @@ ru:
 
   activerecord:
     attributes:
-      address:
+      spree/address:
         secondname: "Отчество"
-      promotion:
+      spree/promotion:
         name: "Название"
         description: "Описание"
         code: "Код"
         usage_limit: "Ограничения"
         starts_at: "Начало"
         expires_at: "Истекает"
-      user:
+      spree/user:
         juridical: "Юридическое лицо"
         recipient: "Наименование организации"
         juridical_address: "Адрес организации"
@@ -50,59 +50,59 @@ ru:
         preferred_director: "ФИО руководителя"
         preferred_accountant: "ФИО главного бухгалтера"
     models: 
-      address: 
+      spree/address: 
         one: "Адрес"
         few: "Адреса"
         other: "Адресов"
-      adjustment:
+      spree/adjustment:
         one: Надбавка
         other: Надбавки
-      calculator:
+      spree/calculator:
         one: Калькулятор
         other: Калькуляторы
-      configuration:
+      spree/configuration:
         one: Конфигурация
         other: Конфигурации
-      image:
+      spree/image:
         one: Изображение
         other: Изображения
-      mail_method:
+      spree/mail_method:
         one: Метод отправки почты
         other: Методы отправки почты
-      option_type:
+      spree/option_type:
         one: Тип опции
         other: Типы опций
-      option_value:
+      spree/option_value:
         one: Значение опции
         other: Значения опции
-      page:
+      spree/page:
         one: Страница
         other: Страницы
-      payment_method:
+      spree/payment_method:
         one: Способ оплаты
         other: Способы оплаты
-      preference:
+      spree/preference:
         one: Настройка
         other: Настройки
-      product_option_type:
+      spree/product_option_type:
         one: Тип опции продукта
         other: Типы опций продукта
-      product_property:
+      spree/product_property:
         one: Свойство товара
         other: Свойства товара
-      product_scope:
+      spree/product_scope:
         one: Фильтр
         other: Фильтры
-      promotion:
+      spree/promotion:
         one: Промо-акция
         other: Промо-акции
-      promotion_rule:
+      spree/promotion_rule:
         one: Правило промо-акции
         other: Правила промо-акции
-      shipping_method:
+      spree/shipping_method:
         one: Способ доставки
         other: Способы доставки
-      tracker:
+      spree/tracker:
         one: Трекер
         other: Трекеры
 
