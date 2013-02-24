@@ -1,4 +1,6 @@
 ru:
+  login: Войти
+
   errors:
     messages:
       not_found: "не найден"
