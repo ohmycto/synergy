@@ -95,50 +95,6 @@ ru:
         one: Трекер
         other: Трекеры
 
-  errors:
-    messages:
-      blank: "не может быть пустым"
-
-  number:
-    # Used in number_to_currency()
-    currency:
-      format:
-        # Формат отображения валюты и обозначение самой валюты
-        #
-        #
-        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
-        format: "%n %u"
-        negative_format: "- %n %u"
-        unit: "руб."
-        # These three are to override number.format and are optional
-        separator: "."
-        delimiter: " "
-        precision: 2
-  
-  date:
-    formats:
-      # Форматы указываются в виде, поддерживаемом strftime.
-      # По умолчанию используется default.
-      # Можно добавлять собственные форматы
-      #
-      #
-      # Use the strftime parameters for formats.
-      # When no format has been given, it uses default.
-      # You can provide other formats here if you like!
-      default: "%d.%m.%Y"
-      short: "%d %b"
-      long: "%d %B %Y"
-  time:
-    # Форматы времени
-    formats:
-      default: "%a, %d %b %Y, %H:%M:%S %z"
-      short: "%d %b, %H:%M"
-      long: "%d %B %Y, %H:%M"
-    
-    # am/pm решено перевести как "утра/вечера" :)
-    am: "утра"
-    pm: "вечера"
-
   synergy_settings: "Настройки Synergy"
   synergy_settings_desc: "Управление настройками Synergy"
 
