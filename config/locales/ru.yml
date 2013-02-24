@@ -43,57 +43,9 @@ ru:
         preferred_director: "ФИО руководителя"
         preferred_accountant: "ФИО главного бухгалтера"
     models: 
-      spree/adjustment:
-        one: Надбавка
-        other: Надбавки
-      spree/calculator:
-        one: Калькулятор
-        other: Калькуляторы
-      spree/configuration:
-        one: Конфигурация
-        other: Конфигурации
-      spree/image:
-        one: Изображение
-        other: Изображения
-      spree/mail_method:
-        one: Метод отправки почты
-        other: Методы отправки почты
-      spree/option_type:
-        one: Тип опции
-        other: Типы опций
-      spree/option_value:
-        one: Значение опции
-        other: Значения опции
       spree/page:
         one: Страница
         other: Страницы
-      spree/payment_method:
-        one: Способ оплаты
-        other: Способы оплаты
-      spree/preference:
-        one: Настройка
-        other: Настройки
-      spree/product_option_type:
-        one: Тип опции продукта
-        other: Типы опций продукта
-      spree/product_property:
-        one: Свойство товара
-        other: Свойства товара
-      spree/product_scope:
-        one: Фильтр
-        other: Фильтры
-      spree/promotion:
-        one: Промо-акция
-        other: Промо-акции
-      spree/promotion_rule:
-        one: Правило промо-акции
-        other: Правила промо-акции
-      spree/shipping_method:
-        one: Способ доставки
-        other: Способы доставки
-      spree/tracker:
-        one: Трекер
-        other: Трекеры
 
   synergy_settings: "Настройки Synergy"
   synergy_settings_desc: "Управление настройками Synergy"
