@@ -1,0 +1,23 @@
+ru:
+  activerecord:
+    attributes:
+      spree/page:
+        title: Заголовок
+        slug: Постоянная ссылка
+        body: Основной текст
+        foreign_link: "Внешняя ссылка (URL)"
+        show_in_header: "Отображать в верхнем меню"
+        show_in_footer: "Отображать в нижнем меню"
+        show_in_sidebar: "Отображать в боковом меню"
+        position: "Позиция в меню"
+        visible: "Публиковать"
+        meta_keywords: "Ключевые слова"
+        meta_description: "Описание"
+        layout: "Макет"
+    models:
+      spree/page:
+        one: Страница
+        few: Страницы
+        many: Страниц
+
+  back_to_static_pages_list: "Вернуться к списку страниц"

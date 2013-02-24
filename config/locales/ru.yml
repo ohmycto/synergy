@@ -42,10 +42,6 @@ ru:
         preferred_nds: "Настройки НДС"
         preferred_director: "ФИО руководителя"
         preferred_accountant: "ФИО главного бухгалтера"
-    models: 
-      spree/page:
-        one: Страница
-        other: Страницы
 
   synergy_settings: "Настройки Synergy"
   synergy_settings_desc: "Управление настройками Synergy"
