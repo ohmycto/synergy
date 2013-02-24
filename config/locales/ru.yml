@@ -16,13 +16,6 @@ ru:
     attributes:
       spree/address:
         secondname: "Отчество"
-      spree/promotion:
-        name: "Название"
-        description: "Описание"
-        code: "Код"
-        usage_limit: "Ограничения"
-        starts_at: "Начало"
-        expires_at: "Истекает"
       spree/user:
         juridical: "Юридическое лицо"
         recipient: "Наименование организации"
@@ -50,10 +43,6 @@ ru:
         preferred_director: "ФИО руководителя"
         preferred_accountant: "ФИО главного бухгалтера"
     models: 
-      spree/address: 
-        one: "Адрес"
-        few: "Адреса"
-        other: "Адресов"
       spree/adjustment:
         one: Надбавка
         other: Надбавки
@@ -109,12 +98,6 @@ ru:
   errors:
     messages:
       blank: "не может быть пустым"
-
-  errors_prohibited_this_record_from_being_saved: 
-    one: "1 ошибка не позволяет сохранить запись в базе"
-    few: "%{count} ошибки не позволяют сохранить запись в базе"
-    many: "%{count} ошибок не позволяют сохранить запись в базе"
-    other: "%{count} ошибок не позволяют сохранить запись в базе"
 
   number:
     # Used in number_to_currency()
