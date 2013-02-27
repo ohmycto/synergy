@@ -1,2 +1,3 @@
-require 'spree_core'
+require 'spree'
+require 'russian'
 require 'synergy/engine'
