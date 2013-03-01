@@ -16,13 +16,13 @@ Synergy
 1. Настройте подключение к базе данных (рекомендуется MySQL с адаптером mysql2)
 1. Добавьте в Gemfile следующие строки:
         
+        gem 'synergy', :git => 'git://github.com/secoint/synergy.git', :branch => '1-3-x'
         gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise', :branch => '1-3-stable'
         gem 'spree_i18n', :git => 'git://github.com/secoint/spree_i18n.git', :branch => '1-3-stable'
         gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-3-stable'
         gem 'spree_editor', :git => 'git://github.com/secoint/spree_editor.git'
         gem 'spree_online_support', :git => 'git://github.com/secoint/spree_online_support.git'
         gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git'
-        gem 'synergy', :git => 'git://github.com/secoint/synergy.git', :branch => '1-3-x'
     
 1. Выполните следующие команды:
     
