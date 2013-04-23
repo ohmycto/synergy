@@ -1,6 +1,7 @@
 module Synergy
   module Generators
     class InstallGenerator < Rails::Generators::Base
+      source_root File.expand_path('../../templates', __FILE__)
 
       class_option :migrate, :type => :boolean, :default => true, :banner => 'Run migrations'
       class_option :seed, :type => :boolean, :default => true, :banner => 'Load seed data (migrations must be run)'
@@ -52,6 +53,11 @@ module Synergy
           append_file "app/assets/javascripts/store/all.js", "//= require store/spree_address_book\n"
           inject_into_file "app/assets/stylesheets/store/all.css", " *= require store/spree_address_book\n", :before => /\*\//, :verbose => true
         }
+      end
+
+      def install_sitemap_generator
+        say_status :installing, 'Sitemap Generator'
+        quietly { template 'sitemap.rb', 'config/sitemap.rb' }
       end
 
       def run_migrations
