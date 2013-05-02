@@ -32,3 +32,12 @@ Synergy
 1. Аналогично Spree, можно использовать следующие параметры (по умолчанию true):
 
         rails g synergy:install --migrate=false --sample=false --seed=false
+
+### SitemapGenerator
+
+В synergy включен как зависимость гем sitemap_generator, служащий для генерации sitemap.xml. Во время установки в директорию config приложения будет скопирован файл sitemap.rb, содержащий конфигурации sitemap_generator. По умолчанию включены статичные страницы и страницы товаров.
+Для генерации sitemap.xml воспользуйтесь командой 
+
+        rake sitemap:refresh
+
+Более подробно о настройке sitemap_generator вы можете прочесть [здесь](https://github.com/kjvarga/sitemap_generator)
