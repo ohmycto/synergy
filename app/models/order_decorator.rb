@@ -18,7 +18,7 @@ Order.class_eval do
     end
 
     if old_payment_state = self.changed_attributes["payment_state"]
-      self.state_events.create({
+      self.state_changes.create({
         :previous_state => old_payment_state,
         :next_state     => self.payment_state,
         :name           => "payment" ,
