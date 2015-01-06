@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency('synergy_russian', '0.2.8')
+  s.add_dependency('russian', '~> 0.6.0')
   s.add_dependency('json', '>= 1.5')
   s.add_dependency('nokogiri', '~> 1.5')
   s.add_dependency('spree', '~> 0.70.0')
