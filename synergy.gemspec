@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('russian', '~> 0.6.0')
   s.add_dependency('json', '>= 1.5')
-  s.add_dependency('nokogiri', '~> 1.5')
+  s.add_dependency('nokogiri', '>= 1.5')
   s.add_dependency('spree', '~> 0.70.0')
   s.add_dependency('spree_static_content', '~> 0.70.0')
   s.add_dependency('spree_editor', '~> 0.70.0')
